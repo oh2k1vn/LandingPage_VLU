@@ -71,3 +71,13 @@
       }
     }
   }
+
+  @media all and (max-width: 900px) {
+    .about {
+      flex-direction: column;
+      &_item {
+        width: 100% !important;
+        margin-bottom: 2rem;
+      }
+    }
+  }
