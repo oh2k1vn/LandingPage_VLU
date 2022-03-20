@@ -1,0 +1,38 @@
+
+.blogdetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    &_day {
+      color: #ccc;
+      margin: 2rem 0;
+    }
+    &_content {
+      max-width: 70%;
+      margin: auto;
+      h1 {
+        font-weight: bold;
+        margin-bottom: 2rem;
+      }
+      p {
+        line-height: 2;
+      }
+    }
+  
+  }
+
+  @media screen and (max-width: 1200px) {
+      .blogdetail {
+          &_content {
+              max-width: 100%;
+          }
+      }
+  }
+
+
