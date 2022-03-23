@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Modal from "../components/Modal/Modal";
 
-export default function about() {
+export default function About() {
   const [show, setShow] = useState(false);
 
   return (
