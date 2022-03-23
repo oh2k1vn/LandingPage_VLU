@@ -19,11 +19,11 @@ footer {
         &::before {
           position: absolute;
           content: "";
-          width: 100px;
+          width: 70px;
           height: 2px;
           background-color: tomato;
           bottom: 0;
-          left: 38%;
+          left: 45%;
         }
       }
       ul {
@@ -46,20 +46,19 @@ footer {
 }
 
 @media all and (min-width: 1024px) {
-  // footer {
-  //   .footer {
-  //     flex-direction: column;
-  //     align-items: center;
-  //     text-align: center;
-  //     &_item {
-  //       width: 80%;
-  //       h4 {
-  //         &::before {
-  //           width: 100px;
-  //           left: 40%;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
+  footer {
+    padding: 2rem;
+    .footer {
+      grid-template-columns: 20% 35% 45%;
+      gap: 2rem;
+      &_item {
+        text-align: left;
+        h4 {
+          &::before {
+            left: 0%;
+          }
+        }
+      }
+    }
+  }
 }
