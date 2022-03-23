@@ -14,6 +14,8 @@
 
 @import "./components/blogDetail.scss";
 
+@import "./components/Modal.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -27,11 +29,19 @@ a {
   text-decoration: none;
   color: unset;
 }
+img {
+  width: 100%;
+  object-fit: cover;
+}
 .container {
   width: 100%;
   max-width: 1260px;
   margin: 0 auto;
   padding: 0 15px;
+}
+.flex {
+  display: flex;
+  width: 100%;
 }
 body {
   position: relative;
@@ -116,23 +126,6 @@ body {
         }
         &_txt {
           font-size: 1.125rem;
-        }
-      }
-    }
-  }
-
-  footer {
-    .footer {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      &_item {
-        width: 80%;
-        h4 {
-          &::before {
-            width: 100px;
-            left: 40%;
-          }
         }
       }
     }

@@ -1,54 +1,85 @@
-.block {
+.home {
+  .block {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    justify-content: center;
-    &_item {
-      width: 50%;
-      img {
-        height: 100%;
-        max-width: 100%;
-        height: auto;
-      }
-      &_text {
-        padding-top: 2.5rem;
+  }
+  .block > .block_flex:nth-child(2) {
+    background-image: linear-gradient(#fff, rgba(0, 0, 0, 0.08));
+  }
+  .block_flex {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .block_title {
+    width: 100%;
+    padding-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .block_img {
+    width: 100%;
+  }
+  .block_title_h2 {
+    // font-size: 3rem;
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+    color: #111;
+  }
+  .block_title_sub {
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .block_title_note {
+    line-height: 1.5;
+    color: #333;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+  .block_title_btn {
+    border: 1px solid transparent;
+    border-radius: 28px;
+    background-color: #111;
+    width: 195px;
+    height: 54px;
+    color: #fd0002;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 1rem auto 0;
+    display: block;
+    &:hover {
+      background-color: #fff;
+      border-color: #111;
+    }
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .home {
+    .block {
+      .block_flex {
         display: flex;
-        flex-direction: column;
-        h2 {
+        width: 100%;
+        flex-direction: row;
+        &:nth-child(odd) {
+          flex-direction: row-reverse;
+        }
+      }
+      .block_title {
+        width: 50%;
+        .block_title_h2 {
           font-size: 3rem;
           margin-bottom: 2rem;
           color: #111;
         }
-        &_sub {
-          margin-bottom: 1rem;
-          color: #333;
-          font-size: 1.5rem;
-          font-weight: 600;
-        }
-        &_txt {
-          line-height: 1.5;
-          color: #333;
-          font-size: 1.125rem;
-          margin-bottom: 1rem;
-          font-weight: 400;
-        }
-        button {
-          border: 1px solid transparent;
-          border-radius: 28px;
-          background-color: #111;
-          width: 195px;
-          height: 54px;
-          color: #fd0002;
-          font-size: 1rem;
-          font-weight: 700;
-          margin-top: 1rem;
-          &:hover {
-            background-color: #fff;
-            border-color: #111;
-          }
-        }
+      }
+      .block_img {
+        width: 50%;
       }
     }
-    &:nth-child(odd) {
-      flex-direction: row-reverse;
-    }
   }
+}

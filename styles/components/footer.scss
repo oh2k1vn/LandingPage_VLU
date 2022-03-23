@@ -1,44 +1,65 @@
 footer {
-    background-color: rgb(51, 51, 51);
-    color: rgb(145, 145, 145);
-    .footer {
-      display: flex;
-      justify-content: space-between;
-      &_item {
-        width: 33.33%;
-        padding: 2rem;
-        
-        h4 {
-          color: #fff;
-          text-transform: uppercase;
-          position: relative;
-          margin-bottom: 1rem;
-          padding-bottom: .5rem;
-          font-size: 20px;
-          &::before {
-            position: absolute;
-            content: '';
-            width: 50px;
-            height: 2px;
-            background-color: tomato;
-            bottom: 0;
-          }
+  background-color: rgb(51, 51, 51);
+  color: rgb(145, 145, 145);
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: auto;
+    &_item {
+      width: 100%;
+      padding: 0.5rem;
+      text-align: center;
+      h4 {
+        color: #fff;
+        text-transform: uppercase;
+        position: relative;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        font-size: 20px;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 100px;
+          height: 2px;
+          background-color: tomato;
+          bottom: 0;
+          left: 38%;
         }
-        ul {
-          display: flex;
-          flex-direction: column;
-          li {
-            line-height: 2rem;
-            transition: .4s;
-            &:hover {
-              color: tomato;
-              transform: translateX(10px);
-            }
-          }
-        }
-        p {
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        li {
           line-height: 2rem;
+          transition: 0.4s;
+          &:hover {
+            color: tomato;
+            transform: translateX(10px);
+          }
         }
+      }
+      p {
+        line-height: 2rem;
       }
     }
   }
+}
+
+@media all and (min-width: 1024px) {
+  // footer {
+  //   .footer {
+  //     flex-direction: column;
+  //     align-items: center;
+  //     text-align: center;
+  //     &_item {
+  //       width: 80%;
+  //       h4 {
+  //         &::before {
+  //           width: 100px;
+  //           left: 40%;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+}
