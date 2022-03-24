@@ -55,6 +55,7 @@ export default function About() {
             </div>
           </Modal>
         </div>
+<<<<<<< HEAD
         <div className="about_content_item">
           <Link href="#">
             <a>
@@ -143,6 +144,8 @@ export default function About() {
             </div>
           </Modal>
         </div>
+=======
+>>>>>>> eeb52c9094c6ce9093c1e5824534e65b975cdacd
       </div>
       <div className="home">
         <div className="block">

@@ -8,11 +8,18 @@ const Navbar = () => {
     {
       name: "Trang chủ",
       route: "/",
+<<<<<<< HEAD
       item: [],
     },
     {
       name: "Giới thiệu",
       route: "/About",
+=======
+    },
+    {
+      name: "Giới thiệu",
+      route: "/about",
+>>>>>>> eeb52c9094c6ce9093c1e5824534e65b975cdacd
       item: [
         {
           name: "Giới thiệu chung",
@@ -30,6 +37,7 @@ const Navbar = () => {
     },
     {
       name: "Đào tạo",
+<<<<<<< HEAD
       route: "/Branch",
       item: [],
     },
@@ -37,11 +45,35 @@ const Navbar = () => {
       name: "Tuyển sinh",
       route: "/Admissions",
       item: [],
+=======
+      route: "https://www.vanlanguni.edu.vn/dao-tao/nganh-dao-tao",
+    },
+    {
+      name: "Tuyển sinh",
+      route: "https://tuyensinh.vanlanguni.edu.vn",
+      item: [
+        {
+          name: "Đại học",
+          route: "/#",
+        },
+        {
+          name: "Cao học",
+          route: "/#",
+        },
+        {
+          name: "CT Đào tạo đặc biệt",
+          route: "/#",
+        },
+      ],
+>>>>>>> eeb52c9094c6ce9093c1e5824534e65b975cdacd
     },
     {
       name: "Tin tức",
       route: "/blog",
+<<<<<<< HEAD
       item: [],
+=======
+>>>>>>> eeb52c9094c6ce9093c1e5824534e65b975cdacd
     },
     {
       name: "Liên kết",
@@ -69,8 +101,16 @@ const Navbar = () => {
         },
       ],
     },
+<<<<<<< HEAD
   ];
 
+=======
+    // {
+    //   name: "Liên hệ",
+    //   route: "/#",
+    // },
+  ];
+>>>>>>> eeb52c9094c6ce9093c1e5824534e65b975cdacd
   console.log(menu);
   const router = useRouter();
 
@@ -93,6 +133,7 @@ const Navbar = () => {
           <label htmlFor="check" className="check_cls">
             <BiX />
           </label>
+<<<<<<< HEAD
           {menu.map((menu, key) => {
             return (
               <li
@@ -117,6 +158,162 @@ const Navbar = () => {
                   </ul> */}
                 </Link>
               </li>
+=======
+          {/* <li className={router.asPath == "/" ? "active" : ""}>
+            <Link href="/">
+              <a>Trang chủ</a>
+            </Link>
+          </li>
+          <li  className={router.asPath == "/about" ? "active" : ""}>
+            <Link href="/about">
+              <a>
+                Giới thiệu
+                <i className="bx bx-chevron-down" />
+              </a>
+            </Link>
+            <ul className="menu_item">
+              <li className={router.asPath == "/community" ? "active" : ""}>
+                <Link href="/community">
+                  <a>Giới thiệu chung</a>
+                </Link>
+              </li>
+              <li className={router.asPath == "/#" ? "active" : ""}>
+                <Link href="#!">
+                  <a>Ban chủ nhiệm</a>
+                </Link>
+              </li>
+              <li className={router.asPath == "/#" ? "active" : ""}>
+                <Link href="#">
+                  <a>Giảng viên</a>
+                </Link>
+              </li>
+            </ul>
+          </li>
+          <li className={router.asPath == "/#" ? "active" : ""}>
+            <Link href="#">
+              <a>
+                Đào tạo
+                <i className="bx bx-chevron-down" />
+              </a>
+            </Link>
+            <ul className="menu_item">
+              <li className={router.asPath == "/#" ? "active" : ""}>
+                <Link href="#">
+                  <a>Chương trình đại học</a>
+                </Link>
+              </li>
+              <li className={router.asPath == "/#" ? "active" : ""}>
+                <Link href="#">
+                  <a>Ngành &amp; Chuyên</a>
+                </Link>
+              </li>
+              <li className={router.asPath == "/#" ? "active" : ""}>
+                <Link href="#">
+                  <a>Cao học</a>
+                </Link>
+              </li>
+              <li className={router.asPath == "/#" ? "active" : ""}>
+                <Link href="#">
+                  <a>Chuẩn đầu ra</a>
+                </Link>
+              </li>
+              <li className={router.asPath == "/#" ? "active" : ""}>
+                <Link href="#">
+                  <a>Đề cương</a>
+                </Link>
+              </li>
+            </ul>
+          </li>
+          <li className={router.asPath == "/#" ? "active" : ""}>
+            <Link href="#">
+              <a>
+                Tuyển sinh
+                <i className="bx bx-chevron-down" />
+              </a>
+            </Link>
+            <ul className="menu_item">
+              <li className={router.asPath == "/##" ? "active" : ""}>
+                <Link href="#">
+                  <a>Đại học</a>
+                </Link>
+              </li>
+              <li className={router.asPath == "/#" ? "active" : ""}>
+                <Link href="#">
+                  <a>Cao học</a>
+                </Link>
+              </li>
+              <li className={router.asPath == "/#" ? "active" : ""}>
+                <Link href="#">
+                  <a>CT đào tạo đặc biệt</a>
+                </Link>
+              </li>
+            </ul>
+          </li>
+          <li className={router.asPath == "/blog" ? "active" : ""}>
+            <Link href="/blog">
+              <a>Tin tức</a>
+            </Link>
+          </li>
+          <li className={router.asPath == "/##" ? "active" : ""}>
+            <a href="#">
+              liên kết
+              <i className="bx bx-chevron-down" />
+            </a>
+            <ul className="menu_item">
+              <li className={router.asPath == "/##" ? "active" : ""}>
+                <Link href="https://www.vanlanguni.edu.vn">
+                  <a>Đại học Văn lang</a>
+                </Link>
+              </li>
+              <li className={router.asPath == "/##" ? "active" : ""}>
+                <Link href="#!">
+                  <a>Tuyển dụng</a>
+                </Link>
+              </li>
+              <li className={router.asPath == "/##" ? "active" : ""}>
+                <Link href="https://www.facebook.com/cnttvlu/">
+                  <a>Fanpage</a>
+                </Link>
+              </li>
+              <li className={router.asPath == "/#" ? "active" : ""}>
+                <Link href="https://www.youtube.com/channel/UCA3rs6ydLPgNghvXXF8In4A">
+                  <a>Youtube</a>
+                </Link>
+              </li>
+              <li className={router.asPath == "/#" ? "active" : ""}>
+                <Link href="https://fit.vlu.edu.vn">
+                  <a>Online LAB</a>
+                </Link>
+              </li>
+            </ul>
+          </li>
+          <li className={router.asPath == "/#" ? "active" : ""}>
+            <Link href="#">
+              <a>liên hệ</a>
+            </Link>
+          </li> */}
+          {menu.map((menu, key) => {
+            return (
+              <li
+                className={router.asPath == menu.route ? "active" : ""}
+                key={key}
+              >
+                <Link href={menu.route}>
+                  {menu.name}
+                  {/* <ul className="menu_item">
+                    {menu.item.map((item, key) => {
+                      return (
+                        <li className={router.asPath == "/" ? "active" : ""}>
+                          <Link href={item.route}>
+                            {item.name}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul> */}
+                </Link>
+              </li>
+>>>>>>> eeb52c9094c6ce9093c1e5824534e65b975cdacd
             );
           })}
         </div>
