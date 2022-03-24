@@ -56,67 +56,6 @@ body {
     max-width: 900px;
   }
 
-  header {
-    height: 60px;
-    .header {
-      padding: 0 20px;
-      .logo {
-        flex: 1;
-        text-align: center;
-        img {
-          height: 50px;
-          width: auto;
-        }
-      }
-      .menu {
-        padding-top: 3rem;
-        justify-content: flex-start;
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        background-color: #fff;
-        flex-direction: column;
-        width: 200px;
-        max-width: 100%;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-        z-index: 99;
-        transform: translateX(-100%);
-        transition: transform linear 0.2s;
-
-        li {
-          width: 100%;
-          text-align: center;
-          .menu_item {
-            top: 3rem;
-            left: 0rem;
-            width: 200px;
-            text-align: center;
-            background-color: rgb(51, 51, 51);
-            color: #fff;
-            z-index: 100;
-          }
-        }
-      }
-      .check_btn {
-        display: block;
-      }
-      .check_cls {
-        display: block;
-        position: absolute;
-        right: 3%;
-        top: 1%;
-        transition: 0.4s;
-      }
-      .check_hover:checked ~ .overlay {
-        display: block;
-      }
-      .check_hover:checked ~ .menu {
-        transform: translateX(0%);
-      }
-    }
-  }
-
   .block {
     flex-direction: column;
     &_item {

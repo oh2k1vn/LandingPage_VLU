@@ -143,6 +143,136 @@ export default function About() {
             </div>
           </Modal>
         </div>
+        <div className="about_content_item">
+          <Link href="#">
+            <a>
+              <Image
+                src="/image/avantar.png"
+                alt=""
+                width={389.95}
+                height={320}
+                layout="responsive"
+              />
+            </a>
+          </Link>
+          <div className="about_content_item_bottom">
+            <Link href="#">
+              <a className="about_content_item_bottom-title">Daika Ginza</a>
+            </Link>
+            <p className="about_content_item_bottom-position">
+              Founder &amp; Chairman
+            </p>
+            <p className="about_content_item_bottom-caption">
+              Serial entrepreneur of various startups - expert in venture
+              builder. Successfully managed an investment portfolio in real
+              estate, cryptos.
+            </p>
+            <button onClick={() => setShow(true)}>Đọc thêm</button>
+          </div>
+          <Modal title="Daika Ginza" onClose={() => setShow(false)} show={show}>
+            <Image
+              src="/image/avantar.png"
+              alt=""
+              width={50}
+              height={50}
+              layout="responsive"
+            />
+            <div className="modal-body-text">
+              <h3>Daika Ginza</h3>
+              <p>
+                Serial entrepreneur of various startups - expert in venture
+                builder. Successfully managed an investment portfolio in real
+                estate, cryptos.
+              </p>
+            </div>
+          </Modal>
+        </div> <div className="about_content_item">
+          <Link href="#">
+            <a>
+              <Image
+                src="/image/avantar.png"
+                alt=""
+                width={389.95}
+                height={320}
+                layout="responsive"
+              />
+            </a>
+          </Link>
+          <div className="about_content_item_bottom">
+            <Link href="#">
+              <a className="about_content_item_bottom-title">Daika Ginza</a>
+            </Link>
+            <p className="about_content_item_bottom-position">
+              Founder &amp; Chairman
+            </p>
+            <p className="about_content_item_bottom-caption">
+              Serial entrepreneur of various startups - expert in venture
+              builder. Successfully managed an investment portfolio in real
+              estate, cryptos.
+            </p>
+            <button onClick={() => setShow(true)}>Đọc thêm</button>
+          </div>
+          <Modal title="Daika Ginza" onClose={() => setShow(false)} show={show}>
+            <Image
+              src="/image/avantar.png"
+              alt=""
+              width={50}
+              height={50}
+              layout="responsive"
+            />
+            <div className="modal-body-text">
+              <h3>Daika Ginza</h3>
+              <p>
+                Serial entrepreneur of various startups - expert in venture
+                builder. Successfully managed an investment portfolio in real
+                estate, cryptos.
+              </p>
+            </div>
+          </Modal>
+        </div> <div className="about_content_item">
+          <Link href="#">
+            <a>
+              <Image
+                src="/image/avantar.png"
+                alt=""
+                width={389.95}
+                height={320}
+                layout="responsive"
+              />
+            </a>
+          </Link>
+          <div className="about_content_item_bottom">
+            <Link href="#">
+              <a className="about_content_item_bottom-title">Daika Ginza</a>
+            </Link>
+            <p className="about_content_item_bottom-position">
+              Founder &amp; Chairman
+            </p>
+            <p className="about_content_item_bottom-caption">
+              Serial entrepreneur of various startups - expert in venture
+              builder. Successfully managed an investment portfolio in real
+              estate, cryptos.
+            </p>
+            <button onClick={() => setShow(true)}>Đọc thêm</button>
+          </div>
+          <Modal title="Daika Ginza" onClose={() => setShow(false)} show={show}>
+            <Image
+              src="/image/avantar.png"
+              alt=""
+              width={50}
+              height={50}
+              layout="responsive"
+            />
+            <div className="modal-body-text">
+              <h3>Daika Ginza</h3>
+              <p>
+                Serial entrepreneur of various startups - expert in venture
+                builder. Successfully managed an investment portfolio in real
+                estate, cryptos.
+              </p>
+            </div>
+          </Modal>
+        </div>
       </div>
       <div className="home">
         <div className="block">
