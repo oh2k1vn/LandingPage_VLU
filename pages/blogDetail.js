@@ -86,10 +86,10 @@ export default function blogDetail() {
               (1) Phiếu đăng k&yacute; dự thi theo mẫu của Trường Đại học Văn
               Lang (
               <a
-                class="wf_file"
+                className="wf_file"
                 href="https://www.vanlanguni.edu.vn/images/VLU_My/hai_khong_hai_muoi/hai_khong_hai_hai/Phi%E1%BA%BFu_%C4%91%C4%83ng_k%C3%BD_d%E1%BB%B1_thi_m%C3%B4n_n%C4%83ng_khi%E1%BA%BFu_-_c%E1%BA%ADp_nh%E1%BA%ADt_-_2202-%C4%91%C3%A3_gi%E1%BA%A3m.pdf"
               >
-                <span class="wf_file_text">tải tại đ&acirc;y</span>
+                <span className="wf_file_text">tải tại đ&acirc;y</span>
               </a>
               ).
             </span>
@@ -357,7 +357,7 @@ export default function blogDetail() {
             ng&agrave;y 31/7/2022.
           </p>
           <p>
-            <span class=" wf_caption">
+            <span className=" wf_caption">
               <img
                 src="https://www.vanlanguni.edu.vn/images/Vlu-Hong-Ngan/thang-ba/vlu-tu%C3%BDensinhnangkhieu/vlu-ky-thi-nang-khieu-san-khau-dien-anh-van-lang-p.gif"
                 alt="vlu ky thi nang khieu san khau dien anh van lang p"
