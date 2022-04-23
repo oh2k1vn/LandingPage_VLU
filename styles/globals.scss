@@ -1,25 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
-@import "./components/header.scss";
-
-@import "./components/footer.scss";
-
-@import "./components/banner.scss";
-
-@import "./components/home.scss";
-
-@import "./components/about.scss";
-
-@import "./components/blog.scss";
-
-@import "./components/blogDetail.scss";
-
-@import "./components/Modal.scss";
-
-@import "./components/Admissions.scss";
-
-@import "./components/Branch.scss";
-
 * {
   margin: 0;
   padding: 0;
@@ -47,8 +27,9 @@ img {
   display: flex;
   width: 100%;
 }
-body {
+body, html {
   position: relative;
+  scroll-behavior: smooth;
 }
 
 @media all and (max-width: 1024px) {

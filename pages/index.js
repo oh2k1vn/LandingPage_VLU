@@ -11,7 +11,11 @@ export default function Home() {
       </Head>
 
       <div className="banner">
-        <Image src="/image/banner2.jpg" alt="" layout="fill" />
+        <Image
+          src="/image/banner2.jpg"
+          alt=""
+          layout="fill"
+        />
         <div className="banner_title">
           <h1>Uniworld ecosystem</h1>
           <p>

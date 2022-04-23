@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Trang chủ",
+    "route": "/"
+  },
+  {
+    "name": "Giới thiệu",
+    "route": "/About",
+    "item": [
+      {
+        "name": "Giới thiệu chung",
+        "route": "/"
+      },
+      {
+        "name": "Ban chủ nhiệm",
+        "route": "/"
+      },
+      {
+        "name": "Giảng viên",
+        "route": "/"
+      }
+    ]
+  },
+  {
+    "name": "Đào tạo",
+    "route": "/Branch"
+  },
+  {
+    "name": "Tuyển sinh",
+    "route": "/Admissions"
+  },
+  {
+    "name": "Tin tức",
+    "route": "/blog"
+  },
+  {
+    "name": "Liên kết",
+    "route": "/",
+    "item": [
+      {
+        "name": "Đại học Văn Lang",
+        "route": "https://www.vanlanguni.edu.vn"
+      },
+      {
+        "name": "Tuyển dụng",
+        "route": "/"
+      },
+      {
+        "name": "Fanpage",
+        "route": "https://www.facebook.com/cnttvlu/"
+      },
+      {
+        "name": "Youtube",
+        "route": "https://www.youtube.com/channel/UCA3rs6ydLPgNghvXXF8In4A"
+      },
+      {
+        "name": "Online LAB",
+        "route": "https://fit.vlu.edu.vn"
+      }
+    ]
+  }
+]

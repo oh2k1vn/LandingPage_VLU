@@ -3,7 +3,7 @@ header {
 	top: 0;
 	right: 0;
 	left: 0;
-	z-index: 121;
+	z-index: 10;
 	box-shadow: 0 0 13px 0 rgb(0 0 0 / 9%);
 	background-color: #fff;
 	width: 100%;
@@ -73,7 +73,7 @@ header {
 				&_a {
 					display: flex;
 					align-items: center;
-					i {
+					svg {
 						margin-left: 5px;
 						transition: 0.3s ease;
 					}
@@ -82,7 +82,7 @@ header {
 					opacity: 1;
 					visibility: visible;
 				}
-				&:hover i {
+				&:hover svg {
 					transform: rotate(180deg);
 				}
 				&::before {
@@ -105,10 +105,20 @@ header {
 				display: flex;
 				align-items: center;
 				padding: 0.5rem 1rem;
-				background-color: tomato;
+				border: 2px solid tomato;
 				border-radius: 2rem;
 				font-size: 18px;
-				color: #fff;
+				color: #000;
+				
+				transition: color .4s ;
+				svg {
+					margin-right: .3rem;
+					font-size: 1.3rem;
+				}
+				&:hover {
+					background-color: tomato;
+					color: #fff;
+				}
 			}
 		}
 
