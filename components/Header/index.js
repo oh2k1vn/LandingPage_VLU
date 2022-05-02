@@ -35,19 +35,24 @@ export default function Index() {
           </label>
           {data?.map((menu, key) => {
             return (
-              <li
-                className={router.asPath == menu.route ? "active" : ""}
-                key={key}
-              >
-                <Link to={menu.route}>{menu.name}</Link>
+              <li key={key}>
+                <Link
+                  to={menu.route}
+                  className={router.asPath == menu.route ? "active" : ""}
+                >
+                  {menu.name}
+                </Link>
                 <ul className="menu_item">
                   {menu.item?.map((item, key) => {
                     return (
-                      <li
-                        className={router.asPath == item.route ? "active" : ""}
-                        key={key}
-                      >
-                        <Link target="_blank" to={item.route}>
+                      <li key={key}>
+                        <Link
+                          target="_blank"
+                          to={item.route}
+                          className={
+                            router.asPath == item.route ? "active" : ""
+                          }
+                        >
                           {item.name}
                         </Link>
                       </li>
@@ -82,9 +87,9 @@ export default function Index() {
           >
             <Modal.Header>
               <Text id="modal-title" size={18}>
-                Welcome to  
+                Welcome to
                 <Text b size={18}>
-                 Blog IT
+                  Blog IT
                 </Text>
               </Text>
             </Modal.Header>

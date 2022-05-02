@@ -22,7 +22,8 @@
       border-radius: 20px;
       box-shadow: 0 3px 3rem rgba(0, 0, 0, 0.08);
       &:hover {
-        border: 1px solid tomato;
+        // border: 1px solid tomato;
+        box-shadow: 0 0 10px tomato;
       }
       &_bottom {
         padding-top: 1.25rem;
@@ -54,16 +55,10 @@
         }
       }
       button {
-        padding: 0.5rem 1.5rem;
-        border: 2px solid transparent;
         background-color: tomato;
         color: #fff;
-        display: block;
         margin: 1rem auto;
-        font-size: 18px;
-        font-weight: 600;
-        border-radius: 25px;
-        cursor: pointer;
+        font-size: 1.2rem;
         transition: 0.5s;
         &:hover {
           border-radius: 0;
