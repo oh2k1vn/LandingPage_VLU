@@ -1,62 +1,156 @@
 [
   {
-    "name": "Trang chủ",
-    "route": "/"
+      "_id": "6275ed46b0771ba54030ab8f",
+      "name": "Giới thiệu",
+      "slug": "/about",
+      "subCategory": [
+          {
+              "_id": "6275ed46b0771ba54030aaaa",
+              "name": "Giới thiệu khoa",
+              "isLink": false,
+              "slug": "/about/faculty",
+              "subCategory": null
+          },
+          {
+              "_id": "6275ed46b0771ba54030abbb",
+              "name": "Ban chủ nhiệm",
+              "isLink": false,
+              "slug": "/about/leader",
+              "subCategory": null
+          },
+          {
+              "_id": "6275ed46b0771ba54030abbz",
+              "name": "Đội ngũ giảng viên",
+              "isLink": false,
+              "slug": "/about/teacher",
+              "subCategory": null
+          }
+      ]
   },
   {
-    "name": "Giới thiệu",
-    "route": "/about",
-    "item": [
-      {
-        "name": "Giới thiệu chung",
-        "route": "/"
-      },
-      {
-        "name": "Ban chủ nhiệm",
-        "route": "/"
-      },
-      {
-        "name": "Giảng viên",
-        "route": "/"
-      }
+      "_id": "6275ed46b0771ba54030ab8p",
+      "name": "Đào tạo",
+      "slug": "/educate",
+      "subCategory": [
+          {
+              "_id": "6275ed46b0771ba54030ab8a",
+              "name": "Đào tạo đại học",
+              "slug": "/educate-program",
+              "isLink": false,
+              "subCategory": null
+          },
+          {
+              "_id": "6275ed46b0771ba54030ab8b",
+              "name": "Đào tạo sau đại học",
+              "isLink": false,
+              "slug": "/educate-after-program",
+              "subCategory": null
+          },
+          {
+              "_id": "6275ed46b0771ba54030ab80",
+              "name": "Chương trình đào tạo đặc biệt",
+              "isLink": false,
+              "slug": "/educate-special-program",
+              "subCategory": null
+          }
+      ]
+  },
+  {
+      "_id": "6275ed46b0771ba54030abgg",
+      "name": "Tuyển sinh",
+      "slug": "/admission",
+      "subCategory": [
+          {
+              "_id": "6275ed46b0771ba54030abfff",
+              "name": "Tuyển sinh đại học",
+              "slug": "https://tuyensinh.vanlanguni.edu.vn/",
+              "isLink": true,
+              "subCategory": null
+          },
+          {
+              "_id": "6275ed46b0771ba54030abee",
+              "name": "Tuyển sinh CNTT",
+              "slug": "/admission/admission-it",
+              "isLink": false,
+              "subCategory": null
+          },
+          {
+              "_id": "6275ed46b0771ba54030abdd",
+              "name": "Chương trình đào tạo đặc biệt",
+              "slug": "/admission/admission-special",
+              "isLink": false,
+              "subCategory": null
+          }
+      ]
+  },
+  {
+    "_id": "6275ed46b0771ba54030abzz",
+    "name": "Blog",
+    "slug": "/blog",
+    "subCategory": [
+        {
+            "_id": "6275ed46b0771ba54030abff",
+            "name": "Tin tức",
+            "slug": "/blog/news",
+            "isLink": false,
+            "subCategory": null
+        },
+        {
+            "_id": "6275ed46b0771ba54030abe",
+            "name": "Sự kiện",
+            "slug": "/blog/event",
+            "isLink": false,
+            "subCategory": null
+        },
+        {
+            "_id": "6275ed46b0771ba5403",
+            "name": "Sắp diễn ra",
+            "slug": "/blog/coming",
+            "isLink": false,
+            "subCategory": null
+        }
     ]
-  },
-  {
-    "name": "Đào tạo",
-    "route": "/Branch"
-  },
-  {
-    "name": "Tuyển sinh",
-    "route": "/Admissions"
-  },
-  {
-    "name": "Tin tức",
-    "route": "/blog"
-  },
-  {
-    "name": "Liên kết",
-    "route": "/",
-    "item": [
+},
+{
+  "_id": "6275ed46b0771ba54030abzz",
+  "name": "Liên kết",
+  "slug": "/",
+  "subCategory": [
       {
-        "name": "Đại học Văn Lang",
-        "route": "https://www.vanlanguni.edu.vn"
+          "_id": "6275ed46b0771ba54d",
+          "name": "Đại học Văn Lang",
+          "slug": "https://www.vanlanguni.edu.vn",
+          "isLink": true,
+          "subCategory": null
       },
       {
-        "name": "Tuyển dụng",
-        "route": "/"
+          "_id": "6275ed46b0771ba54030abeo",
+          "name": "Tuyển dụng",
+          "isLink": true,
+          "slug": "https://ejob.vlu.edu.vn/",
+          "subCategory": null
       },
       {
-        "name": "Fanpage",
-        "route": "https://www.facebook.com/cnttvlu/"
+          "_id": "6275ed46b0771ba540312",
+          "name": "Fanpage",
+          "isLink": true,
+          "slug": "https://www.facebook.com/itvlu",
+          "subCategory": null
       },
       {
+        "_id": "6275ed46b0771ba5403123",
         "name": "Youtube",
-        "route": "https://www.youtube.com/channel/UCA3rs6ydLPgNghvXXF8In4A"
-      },
-      {
-        "name": "Online LAB",
-        "route": "https://fit.vlu.edu.vn"
-      }
-    ]
+        "isLink": true,
+        "slug": "https://www.youtube.com/channel/UCA3rs6ydLPgNghvXXF8In4A",
+        "subCategory": null
+    },
+    {
+      "_id": "6275ed46b0771ba5403123",
+      "name": "Online LAB",
+      "isLink": true,
+      "slug": "https://vlu.is-tech.vn/",
+      "subCategory": null
   }
+  ]
+}
 ]

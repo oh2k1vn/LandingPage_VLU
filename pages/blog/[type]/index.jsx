@@ -7,7 +7,7 @@ export default function blog() {
       <section className="banner">
         <img src="https://uniworld.io/img/banner/1.jpg" alt="" />
         <div className="text ">
-          <h4>Uni Word</h4>
+          <h4>Uni Word</h4>/blog/news/slug
           <p>AI &amp; Blockchain For Society 5.0, Metaverse &amp; Web 3.0</p>
         </div>
       </section>
@@ -15,7 +15,7 @@ export default function blog() {
       <div className="container">
         <section className="body">
           <div className="body_item">
-            <Link href="/blogDetail">
+            <Link href="/blog/news/slug">
               <a>
                 <div className="body_item_img">
                   <img
@@ -45,7 +45,7 @@ export default function blog() {
             </Link>
           </div>
           <div className="body_item">
-            <Link href="/blogDetail">
+            <Link href="/blog/news/slug">
               <a>
                 <div className="body_item_img">
                   <img
@@ -75,7 +75,7 @@ export default function blog() {
             </Link>
           </div>
           <div className="body_item">
-            <Link href="/blogDetail">
+            <Link href="/blog/news/slug">
               <a>
                 <div className="body_item_img">
                   <img
@@ -105,7 +105,7 @@ export default function blog() {
             </Link>
           </div>
           <div className="body_item">
-            <Link href="/blogDetail">
+            <Link href="/blog/news/slug">
               <a>
                 <div className="body_item_img">
                   <img
@@ -135,7 +135,7 @@ export default function blog() {
             </Link>
           </div>
           <div className="body_item">
-            <Link href="/blogDetail">
+            <Link href="/blog/news/slug">
               <a>
                 <div className="body_item_img">
                   <img
@@ -165,7 +165,7 @@ export default function blog() {
             </Link>
           </div>
           <div className="body_item">
-            <Link href="/blogDetail">
+            <Link href="/blog/news/slug">
               <a>
                 <div className="body_item_img">
                   <img
@@ -195,7 +195,7 @@ export default function blog() {
             </Link>
           </div>
           <div className="body_item">
-            <Link href="/blogDetail">
+            <Link href="/blog/news/slug">
               <a>
                 <div className="body_item_img">
                   <img
@@ -226,7 +226,7 @@ export default function blog() {
           </div>
 
           <div className="body_item">
-            <Link href="/blogDetail">
+            <Link href="/blog/news/slug">
               <a>
                 <div className="body_item_img">
                   <img

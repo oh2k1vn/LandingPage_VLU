@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function blogDetail() {
+export default function BlogDetail() {
   return (
     <div className="container">
       <div className="blogdetail">
