@@ -20,9 +20,7 @@ export default function Index() {
 	};
 	const closeHandler = () => {
 		setVisible(false);
-		console.log('closed');
 	};
-	console.log(router.pathname.toString().includes('/admission'))
 
 	return (
 		<header>
@@ -45,7 +43,7 @@ export default function Index() {
 					<li key={dataDefault?._id}>
 						<Link
 							to={dataDefault?.slug}
-							className={(router.pathname = "/" ? 'active' : '')}>
+							className={router.asPath === dataDefault?.slug ? 'active' : ''}>
 							{dataDefault?.name}
 						</Link>
 					</li>
@@ -55,7 +53,11 @@ export default function Index() {
 							<li key={item?._id}>
 								<Link
 									to={item?.slug}
-									className={router.pathname.toString()?.includes("/admission") ? 'active disabled-link' : 'disabled-link'}>
+									className={
+										router.asPath.toString()?.includes(item?.slug)
+											? 'active disabled-link'
+											: 'disabled-link'
+									}>
 									{item?.name}
 								</Link>
 								<ul className='menu_item'>
@@ -66,7 +68,7 @@ export default function Index() {
 													target={item?.isLink ? '_blank' : ''}
 													to={item?.slug}
 													className={
-														router.pathname == item?.slug ? 'active' : ''
+														router.asPath === item?.slug ? 'active' : ''
 													}>
 													{item?.name}
 												</Link>

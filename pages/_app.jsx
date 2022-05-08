@@ -1,12 +1,14 @@
-import { Layout } from '../components/Layout'
-import '../styles/index.scss'
+import { Layout } from '../components/Layout';
+import '../styles/index.scss';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  )
+	return (
+		<Layout>
+			<Component {...pageProps} />
+		</Layout>
+	);
 }
 
-export default MyApp
+export default MyApp;

@@ -6,7 +6,6 @@ import data from "./data.json";
 
 export default function About() {
   const [dataShow, setDataShow] = React.useState({});
-  console.log("🚀 ~ About ~ dataShow", dataShow);
   const [visible, setVisible] = React.useState(false);
 
   const closeHandler = () => {
@@ -20,30 +19,29 @@ export default function About() {
 
   return (
     <div className="container about">
-      <p className="about_text">Who is building UniWorld Ecosystem?</p>
-      <p className="about_text">Foundation Team</p>
+      <p className="about_text">Ban Chủ Nhiệm</p>
       <div className="about_content">
-        {data?.map((item) => {
+        {data?.map(item => {
           return (
             <div className="about_content_item" key={item.id}>
               <Image
-                src={item.image}
+                src={item?.avatar}
                 alt=""
                 width={389.95}
                 height={320}
                 layout="responsive"
               />
               <div className="about_content_item_bottom">
-                <Link to="#" className="about_content_item_bottom-title">
-                  {item.title}
-                </Link>
+                <p className="about_content_item_bottom-title">
+                {item?.name}
+                </p>
                 <p className="about_content_item_bottom-position">
-                  Founder &amp; Chairman
+                  {item?.position}
                 </p>
                 <p className="about_content_item_bottom-caption">
-                  {item.content}
+                  {item?.desc}
                 </p>
-                <Button onClick={() => handlerClickShow(item)}>Đọc thêm</Button>
+                <Button onClick={() => handlerClickShow(item)}>Xem thêm</Button>
               </div>
             </div>
           );
@@ -59,7 +57,7 @@ export default function About() {
               {dataShow?.title}
             </Text>
           </Modal.Header>
-          <Modal.Body>{dataShow?.content}</Modal.Body>
+          <Modal.Body>{dataShow?.name}</Modal.Body>
           <Modal.Footer>
             <Button auto flat color="error" onClick={closeHandler}>
               Close
@@ -70,7 +68,7 @@ export default function About() {
           </Modal.Footer>
         </Modal>
       </div>
-      <div className="home">
+      {/* <div className="home">
         <div className="block">
           <div className="block_flex">
             <div className="block_title">
@@ -118,7 +116,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

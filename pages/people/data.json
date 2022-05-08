@@ -1,0 +1,87 @@
+[
+	{
+		"_id": "ObjectId",
+		"name": "Teacher 1",
+		"phone": "0946666666",
+		"email": "admin1@vanlanguni.vn",
+		"birthday": "1999-11-20T12:05:45",
+		"gender": "nam",
+		"address": "71 Tran Quoc Tuan, Go Vap",
+		"avatar": "https://vlset.vlu.edu.vn/storage/app/media/uploaded-files/thay_minh.jpg",
+		"position": "Thư ký",
+		"linkBio": "htpps://info.pdf",
+		"desc": "Với tôi việc giảng dạy là niềm đam mê, tôi mong muốn thế hệ sau trở thành trụ cột cho đất nước",
+		"link": ["facebook.com", "linkedin.com"]
+	},
+	{
+		"_id": "ObjectId",
+		"name": "Teacher 1",
+		"phone": "0946666666",
+		"email": "admin1@vanlanguni.vn",
+		"birthday": "1999-11-20T12:05:45",
+		"gender": "nam",
+		"address": "71 Tran Quoc Tuan, Go Vap",
+		"avatar": "https://vlset.vlu.edu.vn/storage/app/media/uploaded-files/thay_minh.jpg",
+		"position": "Thư ký",
+		"linkBio": "htpps://info.pdf",
+		"desc": "Với tôi việc giảng dạy là niềm đam mê, tôi mong muốn thế hệ sau trở thành trụ cột cho đất nước",
+		"link": ["facebook.com", "linkedin.com"]
+	},
+
+	{
+		"_id": "ObjectId",
+		"name": "Teacher 1",
+		"phone": "0946666666",
+		"email": "admin1@vanlanguni.vn",
+		"birthday": "1999-11-20T12:05:45",
+		"gender": "nam",
+		"address": "71 Tran Quoc Tuan, Go Vap",
+		"avatar": "https://vlset.vlu.edu.vn/storage/app/media/uploaded-files/thay_minh.jpg",
+		"position": "Thư ký",
+		"linkBio": "htpps://info.pdf",
+		"desc": "Với tôi việc giảng dạy là niềm đam mê, tôi mong muốn thế hệ sau trở thành trụ cột cho đất nước",
+		"link": ["facebook.com", "linkedin.com"]
+	},
+	{
+		"_id": "ObjectId",
+		"name": "Teacher 1",
+		"phone": "0946666666",
+		"email": "admin1@vanlanguni.vn",
+		"birthday": "1999-11-20T12:05:45",
+		"gender": "nam",
+		"address": "71 Tran Quoc Tuan, Go Vap",
+		"avatar": "https://vlset.vlu.edu.vn/storage/app/media/uploaded-files/thay_minh.jpg",
+		"position": "Thư ký",
+		"linkBio": "htpps://info.pdf",
+		"desc": "Với tôi việc giảng dạy là niềm đam mê, tôi mong muốn thế hệ sau trở thành trụ cột cho đất nước",
+		"link": ["facebook.com", "linkedin.com"]
+	},
+	{
+		"_id": "ObjectId",
+		"name": "Teacher 1",
+		"phone": "0946666666",
+		"email": "admin1@vanlanguni.vn",
+		"birthday": "1999-11-20T12:05:45",
+		"gender": "nam",
+		"address": "71 Tran Quoc Tuan, Go Vap",
+		"avatar": "https://vlset.vlu.edu.vn/storage/app/media/uploaded-files/thay_minh.jpg",
+		"position": "Thư ký",
+		"linkBio": "htpps://info.pdf",
+		"desc": "Với tôi việc giảng dạy là niềm đam mê, tôi mong muốn thế hệ sau trở thành trụ cột cho đất nước",
+		"link": ["facebook.com", "linkedin.com"]
+	},
+    {
+		"_id": "ObjectId",
+		"name": "Teacher 1",
+		"phone": "0946666666",
+		"email": "admin1@vanlanguni.vn",
+		"birthday": "1999-11-20T12:05:45",
+		"gender": "nam",
+		"address": "71 Tran Quoc Tuan, Go Vap",
+		"avatar": "https://vlset.vlu.edu.vn/storage/app/media/uploaded-files/thay_minh.jpg",
+		"position": "Thư ký",
+		"linkBio": "htpps://info.pdf",
+		"desc": "Với tôi việc giảng dạy là niềm đam mê, tôi mong muốn thế hệ sau trở thành trụ cột cho đất nước",
+		"link": ["facebook.com", "linkedin.com"]
+	}
+]

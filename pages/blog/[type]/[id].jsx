@@ -1,388 +1,75 @@
-import React from "react";
+import React from 'react';
+import parse from 'html-react-parser';
+import { useRouter } from 'next/router';
 
 export default function BlogDetail() {
-  return (
-    <div className="container">
-      <div className="blogdetail">
-        <img
-          src="https://www.vanlanguni.edu.vn/images/Vlu-Hong-Ngan/thang-ba/vlu-tu%C3%BDensinhnangkhieu/vlu-ky-thi-nang-khieu-san-khau-dien-anh-van-lang-p.gif"
-          alt=""
-          className="w-100"
-        />
+	const router = useRouter();
+	const getData = () => {
+		if (router.asPath.includes('news')) {
+			return dataNews;
+		}
+		if (router.asPath.includes('event')) {
+			return dataEvent;
+		} else {
+			typeof window !== 'undefined' && router.push('/not-found');
+		}
+	};
 
-        <p className="blogdetail_day">
-          Thứ Bảy, ngày 12/03/2022 16:19 PM (GMT+7)
-        </p>
-
-        <div className="blogdetail_content">
-          <p>
-            <span>
-              <span>
-                Từ ng&agrave;y 20/03/2022 đến hết ng&agrave;y 10/04/2022, Trường
-                Đại học Văn Lang nhận hồ sơ đăng k&yacute; dự thi m&ocirc;n năng
-                khiếu Vẽ, &Acirc;m nhạc v&agrave; S&acirc;n khấu Điện ảnh. Kết
-                quả thi c&aacute;c m&ocirc;n thi được sử dụng để x&eacute;t
-                tuyển v&agrave;o 10 ng&agrave;nh năng khiếu: Kiến tr&uacute;c,
-                Thiết kế Nội thất, Thiết kế C&ocirc;ng nghiệp, Thiết kế Thời
-                trang, Thiết kế Đồ họa, Thiết kế Mỹ thuật số,&nbsp; Piano, Thanh
-                nhạc, Diễn vi&ecirc;n Kịch&nbsp;<span>&ndash;</span>&nbsp;Điện
-                ảnh &ndash; Truyền h&igrave;nh, Đạo diễn Điện ảnh&nbsp;
-                <span>&ndash;</span>&nbsp;Truyền h&igrave;nh.
-              </span>
-            </span>
-          </p>
-          <p>
-            Năm 2022, c&aacute;c m&ocirc;n thi năng khiếu Vẽ, &Acirc;m nhạc,
-            S&acirc;n khấu Điện ảnh của Trường Đại học Văn Lang đều c&oacute; 2
-            phương thức thi để th&iacute; sinh lựa chọn:
-          </p>
-          <ol>
-            <li>Thi tập trung trực tiếp tại Trường Đại học Văn Lang</li>
-            <li>Thi online: gửi b&agrave;i dự thi kết hợp phỏng vấn online</li>
-          </ol>
-          <p>
-            <img
-              src="https://www.vanlanguni.edu.vn/images/Vlu-Hong-Ngan/thang-ba/vlu-tu%C3%BDensinhnangkhieu/vlu-thi-nang-khieu--nam-2021.jpg"
-              alt="vlu thi nang khieu nam 2021"
-            />
-          </p>
-          <p>&nbsp;</p>
-          <p>
-            <span>
-              Th&ocirc;ng tin c&aacute;c m&ocirc;n thi năng khiếu tương ứng với
-              c&aacute;c ng&agrave;nh năng khiếu như sau:
-            </span>
-          </p>
-          <p>
-            <span>
-              <span>
-                <img
-                  src="https://www.vanlanguni.edu.vn/images/Vlu-Hong-Ngan/thang-ba/vlu-tu%C3%BDensinhnangkhieu/TSNK.jpg"
-                  alt="TSNK"
-                />
-              </span>
-            </span>
-          </p>
-          <p>
-            <span>
-              <span>Thời hạn đăng k&yacute;</span>
-            </span>
-          </p>
-          <ul>
-            <li>
-              <span>Đợt 1: 20/3/2022 &ndash; 10/4/2022</span>
-            </li>
-            <li>
-              <span>Đợt 2 (dự kiến): 10/5 &ndash; 30/6/2022</span>
-            </li>
-          </ul>
-          <p>
-            <span>
-              <span>Hồ sơ dự thi</span>
-            </span>
-          </p>
-          <p>
-            <span>
-              (1) Phiếu đăng k&yacute; dự thi theo mẫu của Trường Đại học Văn
-              Lang (
-              <a
-                className="wf_file"
-                href="https://www.vanlanguni.edu.vn/images/VLU_My/hai_khong_hai_muoi/hai_khong_hai_hai/Phi%E1%BA%BFu_%C4%91%C4%83ng_k%C3%BD_d%E1%BB%B1_thi_m%C3%B4n_n%C4%83ng_khi%E1%BA%BFu_-_c%E1%BA%ADp_nh%E1%BA%ADt_-_2202-%C4%91%C3%A3_gi%E1%BA%A3m.pdf"
-              >
-                <span className="wf_file_text">tải tại đ&acirc;y</span>
-              </a>
-              ).
-            </span>
-          </p>
-          <p>
-            <span>
-              (2) 02 tấm h&igrave;nh (4x6) /1 m&ocirc;n thi (ghi r&otilde; họ
-              t&ecirc;n, ng&agrave;y th&aacute;ng năm sinh sau mỗi h&igrave;nh),
-              thời gian chụp h&igrave;nh kh&ocirc;ng qu&aacute; 6 th&aacute;ng
-              so với thời điểm đăng k&yacute; dự thi.
-            </span>
-          </p>
-          <p>
-            <span>
-              (3) CMND/CCCD (bản photocoy c&oacute; c&ocirc;ng chứng).
-            </span>
-          </p>
-          <p>
-            <span>
-              (4) Lệ ph&iacute;: 350.000 đồng/ m&ocirc;n thi/ đợt thi/ phương
-              &aacute;n thi.
-            </span>
-          </p>
-          <p>
-            <span>
-              Th&iacute; sinh c&oacute; thể nộp lệ ph&iacute; theo một trong hai
-              c&aacute;ch:
-            </span>
-          </p>
-          <ul>
-            <li>
-              <span>
-                Nộp trực tiếp tại Văn ph&ograve;ng Tuyển sinh Cơ sở ch&iacute;nh
-                (69/68 Đặng Th&ugrave;y Tr&acirc;m, P.13, Q. B&igrave;nh Thạnh),
-                hoặc Cơ sở 1 (45 Nguyễn Khắc Nhu, P. C&ocirc; Giang, Quận 1,
-                Tp.HCM).
-              </span>
-            </li>
-            <li>
-              <span>
-                Chuyển khoản cho Trường Đại học Văn Lang (STK: 1602201001804,
-                Ng&acirc;n h&agrave;ng Agribank - Chi nh&aacute;nh 3,
-                Tp.HCM).&nbsp;
-              </span>
-              Th&iacute; sinh khi chuyển khoản lệ ph&iacute; cần ghi r&otilde;
-              nội dung chuyển tiền theo cấu tr&uacute;c:&nbsp;
-              <span>
-                <em>
-                  Họ v&agrave; t&ecirc;n &ndash; Số CMND/CCCD &ndash; Số điện
-                  thoại &ndash; Lệ ph&iacute; thi AN/ SKĐA/ Vẽ
-                </em>
-                &nbsp;<em>(</em>
-              </span>
-              <em>
-                th&iacute; sinh thi m&ocirc;n năng khiếu n&agrave;o th&igrave;
-                ghi nội dung chuyển lệ ph&iacute; thi m&ocirc;n năng khiếu
-                đ&oacute;).&nbsp;
-              </em>
-              Trong trường hợp th&iacute; sinh kh&ocirc;ng tham gia kỳ thi,
-              Trường kh&ocirc;ng ho&agrave;n lệ ph&iacute;.
-            </li>
-          </ul>
-          <p>
-            <span>
-              <span>Phương thức đăng k&yacute; dự thi:</span>&nbsp;
-            </span>
-            Th&iacute; sinh c&oacute; thể đăng k&yacute; dự thi năng khiếu theo
-            01 trong 03 c&aacute;ch:
-          </p>
-          <p>
-            <span>
-              (1) Nộp trực tiếp tại Văn ph&ograve;ng Tuyển sinh Trường Đại học
-              Văn Lang
-            </span>
-          </p>
-          <ul>
-            <li>
-              <span>
-                <em>Cơ sở ch&iacute;nh:</em>&nbsp;69/68 Đặng Th&ugrave;y
-                Tr&acirc;m, P.13, Q. B&igrave;nh Thạnh, Tp.HCM
-              </span>
-            </li>
-            <li>
-              <span>
-                <em>Cơ sở 1</em>: 45 Nguyễn Khắc Nhu, P. C&ocirc; Giang, Quận 1,
-                Tp.HCM
-              </span>
-            </li>
-            <li>
-              Tải phiếu đăng k&iacute;:&nbsp;
-              <a href="https://vanlangunivn-my.sharepoint.com/:b:/g/personal/tuyensinh_vanlanguni_edu_vn/EdZRERJr6XVBi4gYpp4b7LMBHkILLYLNG0Jik5ea3A3apw?e=mc6TWe">
-                Tại đ&acirc;y
-              </a>
-            </li>
-          </ul>
-          <p>
-            <span>
-              (2) Gửi hồ sơ đăng k&yacute; qua đường bưu điện về Trường Đại học
-              Văn Lang (
-              <em>45 Nguyễn Khắc Nhu, P. C&ocirc; Giang, Q.1, Tp.HCM</em>).
-            </span>
-          </p>
-          <p>
-            <span>
-              (3) Đăng k&yacute; trực tuyến tại cổng th&ocirc;ng tin của Trường
-              Đại học Văn Lang (
-              <a href="https://thinangkhieu.vanlanguni.edu.vn/">
-                https://thinangkhieu.vanlanguni.edu.vn/
-              </a>
-              )&nbsp;Cổng th&ocirc;ng tin mở cho th&iacute; sinh đăng k&yacute;
-              từ ng&agrave;y 20/3/2022.
-            </span>
-          </p>
-          <p>
-            <span>
-              <span>Phương thức tổ chức thi tuyển v&agrave; thời gian thi</span>
-            </span>
-          </p>
-          <p>
-            <span>
-              <span>Đối với c&aacute;c m&ocirc;n năng khiếu Vẽ</span>
-            </span>
-          </p>
-          <p>
-            <span>
-              Trường Đại học Văn Lang tổ chức thi tuyển theo 02 phương thức với
-              02 đợt thi tuyển như sau:
-            </span>
-          </p>
-          <p>
-            <span>
-              <span>Thi tuyển tập trung</span>&nbsp;tại Cơ sở ch&iacute;nh của
-              Trường Đại học Văn Lang (69/68 Đặng Th&ugrave;y Tr&acirc;m, P.13,
-              Q. B&igrave;nh Thạnh, Tp.HCM)
-            </span>
-          </p>
-          <ul>
-            <li>
-              <span>
-                <span>Đợt 1</span>&nbsp;(dự kiến): 16, 17/4/2022
-              </span>
-            </li>
-            <li>
-              <span>
-                <span>Đợt 2</span>&nbsp;(dự kiến): 23, 24/ 7/2022
-              </span>
-            </li>
-          </ul>
-          <p>
-            <span>
-              <span>Thi tuyển trực tuyến (online)</span>
-            </span>
-          </p>
-          <ul>
-            <li>
-              <span>
-                <span>Đợt 1</span>&nbsp;(dự kiến): 28, 29/4/2022
-              </span>
-            </li>
-            <li>
-              <span>
-                <span>Đợt 2</span>&nbsp;(dự kiến): 30, 31/ 7/2022
-              </span>
-            </li>
-          </ul>
-          <p>
-            <span>
-              <em>
-                Th&iacute; sinh dự thi đợt 1 ho&agrave;n th&agrave;nh đăng
-                k&yacute; hồ sơ v&agrave; nộp lệ ph&iacute; trước ng&agrave;y
-                15/4/20
-              </em>
-              <em>2</em>
-              <em>2</em>.&nbsp;
-              <em>
-                Th&iacute; sinh dự thi đợt 2 ho&agrave;n th&agrave;nh nộp lệ
-                ph&iacute; thi trước ng&agrave;y 30/6/20
-              </em>
-              22.
-            </span>
-          </p>
-          <p>
-            <span>
-              <span>
-                <span>
-                  Đối với c&aacute;c m&ocirc;n năng khiếu &Acirc;m nhạc, năng
-                  khiếu S&acirc;n khấu Điện ảnh
-                </span>
-              </span>
-              <br />
-            </span>
-          </p>
-          <p>
-            <span>
-              Trường Đại học Văn Lang tổ chức thi tuyển theo phương thức thi tập
-              trung hoặc thi trực tuyến; tổ chức linh hoạt nhiều đợt thi trong
-              khoảng thời gian từ th&aacute;ng 4 đến th&aacute;ng 9/2022.
-              Nh&agrave; trường li&ecirc;n hệ, tổ chức cho th&iacute; sinh
-              &ocirc;n luyện v&agrave; thi tuyển dựa tr&ecirc;n hồ sơ đăng
-              k&yacute;.
-            </span>
-          </p>
-          <p>
-            <span>
-              <span>
-                Sử dụng điểm thi năng khiếu của c&aacute;c trường kh&aacute;c
-              </span>
-            </span>
-          </p>
-          <p>
-            <span>
-              Năm 2022, Trường Đại học Văn Lang tiếp tục sử dụng kết quả dự thi
-              c&aacute;c m&ocirc;n năng khiếu của th&iacute; sinh đ&atilde; dự
-              thi tại c&aacute;c trường đại học kh&aacute;c, cụ thể:
-            </span>
-          </p>
-          <p>
-            <span>
-              -&nbsp;
-              <span>
-                <em>M&ocirc;n năng khiếu Vẽ</em>
-              </span>
-              : Trường Đại học Văn Lang nhận điểm từ 06 trường đại học: Trường
-              Đại học Kiến tr&uacute;c Tp. Hồ Ch&iacute; Minh, Trường Đại học Mỹ
-              thuật Tp. Hồ Ch&iacute; Minh, Trường Đại học T&ocirc;n Đức Thắng,
-              Trường Đại học Kiến tr&uacute;c H&agrave; Nội, Trường Đại học Mỹ
-              thuật C&ocirc;ng nghiệp, Trường Đại học Nghệ thuật - Đại học Huế.
-            </span>
-          </p>
-          <p>
-            <span>
-              Th&iacute; sinh nộp bổ sung phiếu điểm thi năng khiếu từ
-              c&aacute;c trường đại học n&agrave;y về Trường Đại học Văn Lang
-              trước ng&agrave;y 31/5/2022 (đợt 1) v&agrave; trước 31/7/2022 (đợt
-              2).
-            </span>
-          </p>
-          <p>
-            <span>
-              -&nbsp;
-              <span>
-                <em>M&ocirc;n năng khiếu &Acirc;m nhạc</em>
-              </span>
-              : Trường Đại học Văn Lang nhận điểm từ 04 trường/ học viện: Học
-              viện &Acirc;m nhạc Quốc gia Việt Nam, Nhạc viện Tp. Hồ Ch&iacute;
-              Minh, Viện &Acirc;m nhạc H&agrave; Nội, Học Viện &acirc;m nhạc
-              Huế.&nbsp;
-            </span>
-            Th&iacute; sinh nộp bổ sung phiếu điểm thi năng khiếu từ c&aacute;c
-            trường đại học n&agrave;y về Trường Đại học Văn Lang trước
-            ng&agrave;y 31/7/2022.
-          </p>
-          <p>
-            <span>
-              -&nbsp;
-              <span>
-                <em>M&ocirc;n năng khiếu S&acirc;n khấu Điện ảnh</em>
-              </span>
-              : Trường Đại học Văn Lang nhận điểm từ Trường Đại học S&acirc;n
-              khấu Điện ảnh Tp.HCM v&agrave; Trường Đại học S&acirc;n khấu Điện
-              ảnh H&agrave; Nội.&nbsp;
-            </span>
-            Th&iacute; sinh nộp bổ sung phiếu điểm thi năng khiếu từ c&aacute;c
-            trường đại học n&agrave;y về Trường Đại học Văn Lang trước
-            ng&agrave;y 31/7/2022.
-          </p>
-          <p>
-            <span className=" wf_caption">
-              <img
-                src="https://www.vanlanguni.edu.vn/images/Vlu-Hong-Ngan/thang-ba/vlu-tu%C3%BDensinhnangkhieu/vlu-ky-thi-nang-khieu-san-khau-dien-anh-van-lang-p.gif"
-                alt="vlu ky thi nang khieu san khau dien anh van lang p"
-                width="1200"
-              />
-              <span>
-                Th&iacute; sinh dự thi năng khiếu S&acirc;n khấu Điện ảnh
-                v&agrave;o Trường Đại học Văn Lang năm 2021
-              </span>
-            </span>
-          </p>
-          <p>
-            <span>
-              <span>Tư vấn &ndash; &ocirc;n luyện</span>
-            </span>
-          </p>
-          <p>
-            Nếu c&oacute; nhu cầu &ocirc;n luyện, phụ huynh, th&iacute; sinh vui
-            l&ograve;ng li&ecirc;n hệ theo số hotline của Khoa Nghệ thuật
-            S&acirc;n khấu Điện ảnh: 0903.858.824 (ThS. Nguyễn Thị Qu&yacute;),
-            Khoa Nghệ thuật Ứng dụng: 0941.572.209 (C&ocirc; Nguyễn L&ecirc;
-            Thoại Ch&acirc;u, Thư k&yacute; khoa).
-          </p>
-        </div>
-      </div>
-    </div>
-  );
+	return (
+		<div className='container'>
+			<div className='blogdetail'>
+				{/* <p className='blogdetail_day'>
+					Thứ Bảy, ngày 12/03/2022 16:19 PM (GMT+7)
+				</p> */}
+				<div className='blogdetail_content'>
+					<h2>{getData()?.title}</h2>
+					<br></br>
+					<img src={getData()?.banner} alt='' className='w-100' />
+					<br></br>
+					{/* Render Content */}
+					{getData()?.content && parse(getData()?.content)}
+				</div>
+			</div>
+		</div>
+	);
 }
+
+const dataNews = {
+	_id: 'ObjectId3',
+	tags: ['giaithuong', 'cntt', 'Top 10 Doanh nghiệp'],
+	typeCode: 'blog',
+	typeContent: 'content',
+	link: null,
+	createdAt: '2021-11-20T12:05:45',
+	createdBy: 'adminvip@vanlanguni.vn',
+	avatar: 'https://avt.png',
+	author: 'Gia Hân',
+	title:
+		'Khoa Công nghệ Thông tin Đại học Văn Lang được vinh danh Top 10 Doanh nghiệp Công nghệ Thông tin Việt Nam 2021',
+	slug: '/blog/news/tuyen-sinh-nang-khieu',
+	banner:
+		'https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/10/vlu-dh-van-lang-dat-giai-doanh-nghiep-cong-nghe-thong-tin-thumb-ts.jpg',
+	desc: 'Ngày 09/10/2021, Hiệp hội Phần mềm và dịch vụ Công nghệ Thông tin Việt Nam (VINASA) tổ chức Lễ công bố và vinh danh “TOP 10 Doanh nghiệp Công nghệ Thông tin 2021”. Thứ trưởng Bộ Thông tin và Truyền thông Phạm Đức Long và Thứ trưởng Bộ Khoa học và Công nghệ Trần Văn Tùng tham dự và trao chứng nhận, vinh danh các doanh nghiệp. Trong đó, Khoa Công nghệ Thông tin Trường Đại học Văn Lang vinh dự có mặt trong hạng mục “Top 10 Doanh nghiệp Tăng trưởng ấn tượng”.',
+	content:
+		'<p><strong>Ngày 09/10/2021, Hiệp hội Phần mềm và dịch vụ Công nghệ Thông tin Việt Nam (VINASA) tổ chức Lễ công bố và vinh danh “TOP 10 Doanh nghiệp Công nghệ Thông tin 2021”. Thứ trưởng Bộ Thông tin và Truyền thông Phạm Đức Long và Thứ trưởng Bộ Khoa học và Công nghệ Trần Văn Tùng tham dự và trao chứng nhận, vinh danh các doanh nghiệp. Trong đó, Khoa Công nghệ Thông tin Trường Đại học Văn Lang vinh dự có mặt trong hạng mục “Top 10 Doanh nghiệp Tăng trưởng ấn tượng”.</strong></p><p>Chương trình TOP 10 Doanh nghiệp Công nghệ Thông tin Việt Nam được đổi tên từ “Chương trình 50+10 Doanh nghiệp Công nghệ Thông tin hàng đầu Việt Nam”, là chương trình bình chọn và công nhận các doanh nghiệp có uy tín và năng lực hàng đầu của Việt Nam do Hiệp hội Phần mềm và Dịch vụ CNTT Việt Nam (VINASA) tổ chức hàng năm, bắt đầu từ 2014. Chương trình giới thiệu và kết nối hợp tác các doanh nghiệp được lựa chọn với các đối tác trong nước, quốc tế; nhận được sự đánh giá cao của các cơ quan, doanh nghiệp, tổ chức, đối tác, hỗ trợ hiệu quả cho các doanh nghiệp trong hoạt động marketing, truyền thông và thúc đẩy hợp tác.</p><figure class="image"><img src="https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/10/vlu-dh-van-lang-dat-giai-doanh-nghiep-cong-nghe-thong-tin-b.jpg" alt="" srcset="https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/10/vlu-dh-van-lang-dat-giai-doanh-nghiep-cong-nghe-thong-tin-b.jpg 1200w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/10/vlu-dh-van-lang-dat-giai-doanh-nghiep-cong-nghe-thong-tin-b-300x189.jpg 300w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/10/vlu-dh-van-lang-dat-giai-doanh-nghiep-cong-nghe-thong-tin-b-1024x646.jpg 1024w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/10/vlu-dh-van-lang-dat-giai-doanh-nghiep-cong-nghe-thong-tin-b-768x484.jpg 768w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/10/vlu-dh-van-lang-dat-giai-doanh-nghiep-cong-nghe-thong-tin-b-696x439.jpg 696w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/10/vlu-dh-van-lang-dat-giai-doanh-nghiep-cong-nghe-thong-tin-b-1068x674.jpg 1068w" sizes="100vw" width="1200"></figure><p>Năm 2021, chương trình đã nhận được 194 đề cử từ 167 doanh nghiệp. Vì tình hình phức tạp của đại dịch Covid, toàn bộ hoạt động nộp hồ sơ tham gia, thuyết trình, đánh giá, chấm điểm và bình chọn được thực hiện trực tuyến. Sau 1,5 tháng diễn ra, ngày 12/6/2021, Hội đồng đánh giá do TS. Mai Liêm Trực – nguyên Thứ trưởng Bộ Bưu chính Viễn thông làm Chủ tịch và gần 40 chuyên gia từ các Bộ Thông tin và Truyền thông, Khoa học và Công nghệ, Công Thương, Kế hoạch và Đầu tư cùng các chuyên gia kinh tế, công nghệ và nhà báo đã nhất trí lựa chọn 104 đề cử từ 76 doanh nghiệp, tổ chức xứng đáng vinh danh Top 10 doanh nghiệp CNTT Việt Nam 2021 tại 16 lĩnh vực.</p><p>Đặc biệt, hạng mục “Top 10 Doanh nghiệp Tăng trưởng ấn tượng” lần đầu tiên được thống nhất bổ sung vào nhóm các lĩnh vực được trao giải năm nay, vinh danh các doanh nghiệp có mức tăng trưởng rất cao từ 77 đến trên 300%. Khoa Công nghệ Thông tin Trường Đại học Văn Lang là một trong 9 đơn vị được vinh danh ở hạng mục này.</p><figure class="image"><img src="https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/10/vlu-dh-van-lang-dat-giai-doanh-nghiep-cong-nghe-thong-tin-c.jpg" alt="" srcset="https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/10/vlu-dh-van-lang-dat-giai-doanh-nghiep-cong-nghe-thong-tin-c.jpg 1728w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/10/vlu-dh-van-lang-dat-giai-doanh-nghiep-cong-nghe-thong-tin-c-300x195.jpg 300w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/10/vlu-dh-van-lang-dat-giai-doanh-nghiep-cong-nghe-thong-tin-c-1024x665.jpg 1024w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/10/vlu-dh-van-lang-dat-giai-doanh-nghiep-cong-nghe-thong-tin-c-768x499.jpg 768w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/10/vlu-dh-van-lang-dat-giai-doanh-nghiep-cong-nghe-thong-tin-c-1536x998.jpg 1536w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/10/vlu-dh-van-lang-dat-giai-doanh-nghiep-cong-nghe-thong-tin-c-696x452.jpg 696w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/10/vlu-dh-van-lang-dat-giai-doanh-nghiep-cong-nghe-thong-tin-c-1068x694.jpg 1068w" sizes="100vw" width="1728"></figure><p>Tham gia chương trình, Khoa Công nghệ Thông tin Trường Đại học Văn Lang mang đến những thành quả nghiên cứu và phát triển nổi bật:</p><ul><li><strong>Giải pháp “Hồ sơ điện tử sinh viên”</strong>, sản phẩm Đề tài NCKH cấp Trường do CB-GV-NV Khoa CNTT thực hiện và kết quả hợp tác với các DN triển khai hệ thống ở quy mô lớn, có thể phục vụ cho hàng trăm ngàn sinh viên, ứng dụng nhiều công nghệ thông minh (AI) như nhận dạng khuôn mặt thông minh (Smart FaceID), phân tích dữ liệu lớn liên quan tới kết quả học tập của sinh viên, cảnh báo và dự báo kết quả học tập, hỗ trợ sinh viên xây dựng lộ trình học tập, đăng ký tín chỉ.</li><li><strong>Giải pháp “Phòng thí nghiệm học tập kết hợp trực tuyến”</strong>&nbsp;– sản phẩm ứng dụng các công nghệ chuyển đổi số “make in Viet Nam” như điện toán đám mây riêng, kết nối mạng bằng phần mềm, quản lý định danh phân tán, mô hình kho lưu trữ dữ liệu…, phát triển từ kết quả của Đề tài KHCN cấp Nhà nước KC01.18 (2011-2015) do TS. Hoàng Lê Minh làm Chủ nhiệm đề tài, đã nghiệm thu và đưa vào ứng dụng.</li></ul><p>Sau thời gian chuẩn bị hồ sơ thủ tục, tham dự các hoạt động thuyết trình và bình chọn, thành tích Top 10 Doanh nghiệp Tăng trưởng ấn tượng năm 2021 là thành quả xứng đáng cho nỗ lực của Khoa Công nghệ Thông tin trường Đại học Văn Lang.</p><p>Kết thúc Lễ Vinh danh, danh sách và ấn phẩm giới thiệu TOP 10 doanh nghiệp Công nghệ Thông tin Việt Nam 2021 sẽ tiếp tục được VINASA giới thiệu đến các cơ quan Chính phủ, bộ, ban, ngành, tỉnh, thành phố và trên 5.000 cơ quan, đơn vị, tổ chức, doanh nghiệp ứng dụng công nghệ thông tin lớn trên toàn quốc; các doanh nghiệp, hiệp hội, thương vụ, tổ chức xúc tiến thương mại tại 100 quốc gia và nền kinh tế trong mạng lưới hợp tác quốc tế của VINASA.</p><figure class="image"><img src="https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/10/vlu-dh-van-lang-dat-giai-doanh-nghiep-cong-nghe-thong-tin-a.jpg" alt="" srcset="https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/10/vlu-dh-van-lang-dat-giai-doanh-nghiep-cong-nghe-thong-tin-a.jpg 1200w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/10/vlu-dh-van-lang-dat-giai-doanh-nghiep-cong-nghe-thong-tin-a-300x169.jpg 300w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/10/vlu-dh-van-lang-dat-giai-doanh-nghiep-cong-nghe-thong-tin-a-1024x576.jpg 1024w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/10/vlu-dh-van-lang-dat-giai-doanh-nghiep-cong-nghe-thong-tin-a-768x432.jpg 768w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/10/vlu-dh-van-lang-dat-giai-doanh-nghiep-cong-nghe-thong-tin-a-696x392.jpg 696w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/10/vlu-dh-van-lang-dat-giai-doanh-nghiep-cong-nghe-thong-tin-a-1068x601.jpg 1068w" sizes="100vw" width="1200"></figure><p><i>Tập thể cán bộ, giảng viên, nhân viên Khoa Công nghệ Thông tin Trường Đại học Văn Lang</i></p><p><strong>KHOA CÔNG NGHỆ THÔNG TIN</strong></p><p>&nbsp;</p><p>Khoa Công nghệ Thông tin Trường Đại học Văn Lang thành lập tháng 9/1995, tuyển sinh &amp; đào tạo kỹ sư Tin học với quy mô 100-150 sinh viên/năm. Từ tháng 5/2008, Khoa tiếp nhận Chương trình đào tạo Kỹ thuật phần mềm từ Đại học Carnegie Mellon University – Hoa Kỳ. Mục tiêu của Khoa là trở thành một trong các đơn vị đào tạo Công nghệ Thông tin trình độ Đại học và Sau đại học lớn nhất, có uy tín nhất tại Việt Nam và trong khu vực với triết lý giáo dục “Đạo đức – Ý chí – Sáng tạo”.</p>'
+};
+
+const dataEvent = {
+	_id: 'ObjectId24',
+	tags: ['NashTech', 'cntt'],
+	typeCode: 'blog',
+	typeContent: 'content',
+	link: null,
+	createdAt: '2021-11-20T12:05:45',
+	createdBy: 'adminvip@vanlanguni.vn',
+	avatar: 'https://avt.png',
+	author: 'Kim Tuyến – Sinh viên K23 ngành Quan hệ Công chúng',
+	title:
+		'Sinh viên Công nghệ Thông tin Văn Lang gặp gỡ NashTech – doanh nghiệp hàng đầu trong lĩnh vực Công nghệ',
+	slug: '/blog/event/sinh-vien-cong-nghe-thong-tin-van-lang-gap-go-nashtech-doanh-nghiep-hang-dau-trong-linh-vuc-cong-nghe',
+	banner:
+		'https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-e.jpg',
+	desc: 'Ngày 05/5/2021, Khoa Công nghệ Thông tin Trường Đại học Văn Lang phối hợp cùng Công ty NashTech tổ chức Hội thảo về chương trình thực tập mới nhất của Công ty NashTech – The Rookies và các công nghệ mới đang triển khai.',
+	content:
+		'<p><strong>Ngày 05/5/2021, Khoa Công nghệ Thông tin Trường Đại học Văn Lang phối hợp cùng Công ty NashTech tổ chức Hội thảo về chương trình thực tập mới nhất của Công ty NashTech – The Rookies và các công nghệ mới đang triển khai.</strong></p><p>Nhằm tạo điều kiện cho sinh viên có cơ hội tiếp xúc thực tế với doanh nghiệp, tìm kiếm cơ hội thực tập và được nghe chia sẻ về định hướng nghề nghiệp, khoa Công nghệ Thông tin trường Đại học Văn Lang kết hợp với công ty NashTech tổ chức chương trình The Rookies Program 2021 dành cho sinh viên đang học tập tại Khoa. Đây là công ty trực thuộc tập đoàn Harvey Nash và là cũng là doanh nghiệp thuộc lĩnh vực công nghệ lớn thứ 2 tại Việt Nam, chuyên cung cấp dịch vụ phát triển nền tảng kỹ thuật số và công nghệ tiên tiến cho nhiều dự án có quy mô lớn trên toàn cầu.</p><figure class="image"><img src="https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-a.jpg" alt="" srcset="https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-a.jpg 1000w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-a-300x200.jpg 300w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-a-768x512.jpg 768w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-a-696x464.jpg 696w" sizes="100vw" width="1000"></figure><p><i>Chương trình diễn ra với sự tham gia của đông đảo sinh viên khoa Công nghệ thông tin</i></p><p>Được thành lập từ năm 2000, sau hơn 20 năm hình thành và phát triển thương hiệu, NashTech ngày càng khẳng định giá trị của mình thông qua những sản phẩm dịch vụ cung cấp đến khách hàng. Chương tình diễn ra với sự tham dự của Th.S Bùi Minh Phụng – Phó trưởng Khoa Công nghệ thông tin và khách mời từ doanh nghiệp cùng hơn 100 sinh viên đăng ký tham gia. Tại buổi trò chuyện, sinh&nbsp;viên được lắng nghe những chia sẻ đến từ 2 diễn giả là đại diện doanh nghiệp chia sẻ các kiến thức và kinh nghiệm xoay quanh chủ đề:&nbsp;<strong>“Best practices to become a world-class developer”</strong>&nbsp;do ông Nguyễn Phạm Luận Tiến – Trưởng bộ phận quản lý lập trình viên dẫn dẳt và&nbsp;<strong>“The Importance of Software Testing”</strong>&nbsp;do ông Phạm Phú Vinh – Trưởng nhóm kiểm lỗi phần mềm trình bày.</p><figure class="image"><img src="https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-b.jpg" alt="" srcset="https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-b.jpg 1000w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-b-300x200.jpg 300w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-b-768x512.jpg 768w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-b-696x464.jpg 696w" sizes="100vw" width="1000"></figure><p><i>Diễn giả Phạm Phú Vinh – Trưởng nhóm kiểm lỗi phần mềm NashTech</i></p><figure class="image"><img src="https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-c.jpg" alt="" srcset="https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-c.jpg 1000w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-c-300x200.jpg 300w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-c-768x512.jpg 768w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-c-696x464.jpg 696w" sizes="100vw" width="1000"></figure><p><i>Diễn giả Nguyễn Phạm Luận Tiến – Trưởng bộ phận quản lý lập trình viên NashTech</i></p><p>Không dừng lại trong khuôn khổ của một buổi trò chuyện truyền đạt kiến thức, công ty NashTech còn tạo cơ hội cho các sinh viên năm cuối, năm 2 và năm 3 Khoa Công nghệ Thông tin được đăng ký tham gia chương trình thực tập&nbsp;<strong>The Rookies Program 2021</strong>&nbsp;bằng cách tham dự bài kiểm tra đánh giá đầu vào. Ngay trong buổi sáng diễn ra chương trình, 9 gương mặt sáng giá của Khoa đã được NashTech lựa chọn, vượt qua bài đánh giá đầu vào&nbsp;<strong>The Rookies Program 2021</strong>&nbsp;gồm:</p><ul><li>Phan Nguyễn Thị Yến Nhi</li><li>Nguyễn Chí Thành</li><li>Hồ Nguyễn Trí Nhân</li><li>Cao Khánh Việt</li><li>Hương Vũ</li><li>Huỳnh Bá Vinh</li><li>Trần Nguyễn Bảo Ngọc</li><li>Trần Quang Vinh</li><li>Trần Thị Yến Dâng</li></ul><p><strong>Thông tin về chương trình The Rookies Program 2021:</strong></p><p>The Rookies Program 2021 là chương trình phát triển tài năng chuyên sâu dành cho sinh viên năm cuối đại học và sinh viên mới tốt nghiệp nghiên cứu về công nghệ thông tin, phần mềm, kiểm thử phần mềm và hệ thống dữ liệu. Thời gian đào tạo của chương trình trong vòng 3 tháng.&nbsp;Bằng cách tham gia chương trình này, sinh viên sẽ được hướng nghiệp và đào tạo thực hành, đồng thời tham gia vào các dự án toàn cầu của NashTech cùng với các chuyên gia kỹ thuật của doanh nghiệp.&nbsp;Ứng cử viên sẽ học được những bài học quý giá về kỹ năng mềm và tiếng Anh. Kế hoạch đào tạo của chương trình sẽ cung cấp cho thực tập sinh kiến thức và kinh nghiệm cần thiết để trở thành một kỹ sư phần mềm thực thụ.</p><p><strong>Quy trình ứng tuyển:</strong></p><ul><li>Ứng viên đăng ký theo đường link do chương trình cung cấp.</li><li>Tham gia bài test kỹ thuật và tiếng Anh – mỗi bài kiểm tra kéo dài 30 phút.</li><li>Sinh viên đủ điều kiện sẽ nhận được thư mời trúng tuyển và tiến hành tham gia chương trình.</li></ul><figure class="image"><img src="https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-d.jpg" alt="" srcset="https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-d.jpg 1000w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-d-300x200.jpg 300w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-d-768x512.jpg 768w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-d-696x464.jpg 696w" sizes="100vw" width="1000"></figure><p><i>Sinh viên tiến hành thực hiện bài kiểm tra đánh giá đầu vào của doanh nghiệp</i></p><p><strong>Những lợi ích thu được sau khi tham gia chương trình:</strong></p><ul><li>Người tham gia được đào tạo chuyên sâu miễn phí. Có những khóa đào tạo bài bản kèm theo kinh nghiệm thực tiễn làm việc trong các dự án thực tế.</li><li>Môi trường làm việc chuyên nghiệp, cởi mở, khuyến khích nhân viên phát triển những ý tưởng mang tính xây dựng.</li><li>Mang lại cơ hội việc làm, những người tham gia sẽ có cơ hội tham gia vào đội ngũ kỹ sư phần mềm thế hệ tiếp theo của chúng tôi tại NashTech.</li><li>Lộ trình làm việc rõ ràng và linh hoạt, đáp ứng nhu cầu của mỗi cá nhân.</li></ul><figure class="image"><img src="https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-e.jpg" alt="" srcset="https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-e.jpg 1000w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-e-300x158.jpg 300w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-e-768x406.jpg 768w, https://tuyensinh.vanlanguni.edu.vn/wp-content/uploads/2021/05/vlu-sv-cntt-gap-go-nashtech-e-696x367.jpg 696w" sizes="100vw" width="1000"></figure><p><i>Buổi hội thảo đã đem lại nhiều kiến thức và kinh nghiệm bổ ích, đồng thời giúp sinh viên Văn Lang có cơ hội giao lưu đặt những câu hỏi mà mình quan tâm đến doanh nghiệp.</i></p><p>Một trong những bạn sinh viên xuất sắc thông qua bài kiểm tra, Nguyễn Chí Thành – sinh viên khóa 25 ngành Kỹ thuật phần mềm chia sẻ:&nbsp;<i>“Khi tham gia hội thảo ngày hôm nay, mình có cơ hội được làm quen với những câu hỏi mà doanh nghiệp sẽ sử dụng để phỏng vấn. Nhờ vậy giúp mình có thêm nhiều kinh nghiệm để chuẩn bị tốt hơn trong những lần phỏng vấn về sau. Cùng với đó, bọn mình được thực hiện bài kiểm tra, đây là dạng bài test mình đã từng gặp qua trên HackerRank nên mình không gặp nhiều khó khăn khi thực hiện.”</i>&nbsp;(HackerRank là phần mềm cho phép lập trình viên trau dồi và rèn luyện kỹ năng. Thông qua tốc độ giải đáp vấn đề và kết quả, HackerRank sẽ đánh giá và xếp hạng các lập trình viên tham gia).</p>'
+};

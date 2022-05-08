@@ -33,6 +33,7 @@
     gap: 1rem;
     &_item {
       margin-top: 1rem;
+      height: 100%;
       a {
         border-radius: 5px;
         display: block;
@@ -46,7 +47,7 @@
         padding-bottom: 1rem;
         &:hover {
           transform: translateY(-10px);
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
       }
 
@@ -70,7 +71,7 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         line-height: 1;
-        font-size: 26px;
+        font-size: 1.2rem;
         font-weight: bold;
         margin: 1rem 0;
       }

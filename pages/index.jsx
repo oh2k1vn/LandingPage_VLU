@@ -1,8 +1,17 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import parse from 'html-react-parser';
+import Slider from 'react-slick';
 
 export default function Home() {
+	const settings = {
+		dots: true,	
+		infinite: true,
+		speed: 500,
+		slidesToShow: 1,
+		slidesToScroll: 1
+	};
+
 	return (
 		<>
 			<Head>
@@ -14,23 +23,30 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<div className='banner'>
-				<Image src='/image/banner3.jpg' alt='' layout='fill' />
-				<div className='banner_title'>
-					<h1>{data?.banner?.title}</h1>
-					{/* Render title */}
-					{data?.banner?.desc && parse(data?.banner?.desc)}
+			<Slider {...settings}>
+				<div className='banner'>
+					<Image src='/image/banner3.jpg' alt='' layout='fill' />
+					<div className='banner_title'>
+						<h1>{data?.banner?.title}</h1>
+						{data?.banner?.desc && parse(data?.banner?.desc)}
+					</div>
 				</div>
-			</div>
+				<div className='banner'>
+					<Image src='/image/banner3.jpg' alt='' layout='fill' />
+					<div className='banner_title'>
+						<h1>{data?.banner?.title}</h1>
+						{data?.banner?.desc && parse(data?.banner?.desc)}
+					</div>
+				</div>
+			</Slider>
+
 			<main className='home'>
 				<div className='block'>
 					<div className='container block_flex'>
 						<div className='block_title'>
-							<h2 className='block_title_h2'>
-								{data.row1.title}
-							</h2>
+							<h2 className='block_title_h2'>{data.row1.title}</h2>
 							{/* Render Content */}
-              {data.row1.desc && parse(data.row1.desc)}
+							{data.row1.desc && parse(data.row1.desc)}
 						</div>
 						<div className='block_img'>
 							<Image
@@ -42,16 +58,11 @@ export default function Home() {
 							/>
 						</div>
 					</div>
-					{/* <div className='container block_flex'>
+					<div className='container block_flex'>
 						<div className='block_title'>
-							<h2 className='block_title_h2'>
-								Re-Evolution For The Next Generation!
-							</h2>
-							<p className='block_title_sub'>
-								We Re-Evolve the existing things to a higher form. At Uniworld,
-								we constantly rethink, reinvent and upgrade the existing
-								technologies.
-							</p>
+							<h2 className='block_title_h2'>{data.row2.title}</h2>
+							{/* Render Content */}
+							{data.row2.desc && parse(data.row2.desc)}
 						</div>
 						<div className='block_img'>
 							<Image
@@ -65,17 +76,10 @@ export default function Home() {
 					</div>
 					<div className='container block_flex'>
 						<div className='block_title'>
-							<h2 className='block_title_h2'>
-								All values created by people are for people is happiness
-							</h2>
-							<p className='block_title_note'>
-								It is flawed if what you create is only to satisfy personal
-								creativity.
-								<br />
-								Uniworld is powered by passion, creativity, and the desire to
-								contribute to the betterment of humanity.
-							</p>
-							<button className='block_title_btn'>Create a Wallet</button>
+							<h2 className='block_title_h2'>{data.row3.title}</h2>
+							{/* Render Content */}
+							{data.row3.desc && parse(data.row3.desc)}
+							<button className='block_title_btn'>Liên hệ ngay</button>
 						</div>
 						<div className='block_img'>
 							<Image
@@ -87,7 +91,7 @@ export default function Home() {
 							/>
 						</div>
 					</div>
-					<div className='container block_flex'>
+					{/* <div className='container block_flex'>
 						<div className='block_title'>
 							<h2 className='block_title_h2'>All-in-one account</h2>
 							<p className='block_title_sub'>
@@ -124,13 +128,19 @@ const data = {
 	row1: {
 		image: '',
 		positionContent: 'right',
-		title: 'Công nghệ thông tin',
-		desc: '<p><strong>Công nghệ thông tin được xem như là ngành mũi nhọn hướng đến sự phát triển của khoa học và công nghệ trong thời đại số hiện nay, là một trong những ngành có xu hướng thay đổi theo từng ngày, được ứng dụng rộng rãi trong mọi ngành nghề.</strong></p><p><strong>Ứng dụng của công nghệ thông tin (CNTT) trong đời sống xã hội hiện đại ngày càng nhiều, từ thương mại đến giải trí và thậm chí cả y tế, văn hóa, xã hội và giáo dục,… Đặc biệt trong giai đoạn bị bệnh dịch Covid khiến thành phố phải phong tỏa hạn chế di chuyển thì CNTT càng cho thấy tầm quan trọng của nó.</strong></p><p><strong>Vì vậy, tốt nghiệp ngành CNTT hiện nay đang có rất nhiều cơ hội để phát triển nghề nghiệp trên nhiều lĩnh vực khác nhau. Đặc biệt là những doanh nghiệp đa quốc gia đang phát triển và tăng trưởng rất mạnh tại việt nam.</strong></p>'
+		title: 'Công nghệ thông tin 4.0',
+		desc: '<p>Công nghệ thông tin được xem như là ngành mũi nhọn hướng đến sự phát triển của khoa học và công nghệ trong thời đại số hiện nay, là một trong những ngành có xu hướng thay đổi theo từng ngày, được ứng dụng rộng rãi trong mọi ngành nghề.</p><p>Ứng dụng của công nghệ thông tin (CNTT) trong đời sống xã hội hiện đại ngày càng nhiều, từ thương mại đến giải trí và thậm chí cả y tế, văn hóa, xã hội và giáo dục,… Đặc biệt trong giai đoạn bị bệnh dịch Covid khiến thành phố phải phong tỏa hạn chế di chuyển thì CNTT càng cho thấy tầm quan trọng của nó.</p><p>Vì vậy, tốt nghiệp ngành CNTT hiện nay đang có rất nhiều cơ hội để phát triển nghề nghiệp trên nhiều lĩnh vực khác nhau. Đặc biệt là những doanh nghiệp đa quốc gia đang phát triển và tăng trưởng rất mạnh tại việt nam.</p>'
 	},
 	row2: {
 		image: '',
-		title: 'Công nghệ thông tin',
+		title: 'Đào tạo đại học',
 		positionContent: 'left',
-		desc: '<p><strong>Công nghệ thông tin được xem như là ngành mũi nhọn hướng đến sự phát triển của khoa học và công nghệ trong thời đại số hiện nay, là một trong những ngành có xu hướng thay đổi theo từng ngày, được ứng dụng rộng rãi trong mọi ngành nghề.</strong></p><p><strong>Ứng dụng của công nghệ thông tin (CNTT) trong đời sống xã hội hiện đại ngày càng nhiều, từ thương mại đến giải trí và thậm chí cả y tế, văn hóa, xã hội và giáo dục,… Đặc biệt trong giai đoạn bị bệnh dịch Covid khiến thành phố phải phong tỏa hạn chế di chuyển thì CNTT càng cho thấy tầm quan trọng của nó.</strong></p><p><strong>Vì vậy, tốt nghiệp ngành CNTT hiện nay đang có rất nhiều cơ hội để phát triển nghề nghiệp trên nhiều lĩnh vực khác nhau. Đặc biệt là những doanh nghiệp đa quốc gia đang phát triển và tăng trưởng rất mạnh tại việt nam.</strong></p>'
+		desc: '<p>Chương trình Đào tạo Đặc biệt ngành Công nghệ Thông tin được phát triển từ Chương trình Tiêu chuẩn với chất lượng đào tạo đã được khẳng định trong nhiều năm qua, và kết hợp với các điểm đặc trưng:</p><ul><li><strong>Chú trọng thực hành:</strong> Sinh viên CTĐT Đặc biệt ngành Công nghệ Thông tin được học song song lý thuyết và thực hành tại phòng Lab (không quá 30 sinh viên).</li><li><strong>Tiếp cận doanh nghiệp sớm:</strong> Từ năm 3, sinh viên CTĐTĐB ngành Công nghệ Thông tin được đưa đến các doanh nghiệp thực tập và được doanh nghiệp đào tạo chuyên ngành.</li><li><strong>Định hướng chuyên sâu:</strong> Năm 4, Khoa sẽ cung cấp các doanh nghiệp đã thỏa thuận hợp tác, sinh viên CTĐT Đặc biệt ngành Công nghệ Thông tin sẽ được tự do lựa chọn doanh nghiệp ở lĩnh vực chuyên môn mà sinh viên mong muốn làm việc sau này.</li></ul><p>Có 4 chuyên ngành: Công nghệ Phần mềm, Công nghệ Dữ liệu, Tin học Quản trị, An ninh mạng. Đồ án tốt nghiệp chính là nhu cầu thực tại cuả Doanh nghiệp mà SV đã lựa chọn.</p>'
+	},
+	row3: {
+		image: '',
+		title: 'Cơ hội nghề nghiệp & Các đối tác & Học bổng',
+		positionContent: 'left',
+		desc: '<ul><li>Lập trình viên</li><li>Chuyên gia phát triển phần mềm</li><li>Lập trình, xây dựng hệ thống Internet vạn vật (IoT)</li><li>Quản trị mạng doanh nghiệp</li><li>An ninh mạng</li><li>Phân tích dữ liệu doanh nghiệp</li><li>Quản trị hệ thống điện toán đám mây</li></ul>'
 	}
 };

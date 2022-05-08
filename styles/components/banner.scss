@@ -3,6 +3,9 @@
   position: relative;
   margin: 0 auto;
   font-weight: 700;
+  .slick-arrow .slick-next{
+    display: none;
+  }
   img {
     object-fit: cover;
     width: 100%;

@@ -15,14 +15,14 @@
               "_id": "6275ed46b0771ba54030abbb",
               "name": "Ban chủ nhiệm",
               "isLink": false,
-              "slug": "/about/leader",
+              "slug": "/people/leader",
               "subCategory": null
           },
           {
               "_id": "6275ed46b0771ba54030abbz",
               "name": "Đội ngũ giảng viên",
               "isLink": false,
-              "slug": "/about/teacher",
+              "slug": "/people/teacher",
               "subCategory": null
           }
       ]
@@ -35,7 +35,7 @@
           {
               "_id": "6275ed46b0771ba54030ab8a",
               "name": "Đào tạo đại học",
-              "slug": "/educate-program",
+              "slug": "/educate/educate-program",
               "isLink": false,
               "subCategory": null
           },
@@ -43,14 +43,14 @@
               "_id": "6275ed46b0771ba54030ab8b",
               "name": "Đào tạo sau đại học",
               "isLink": false,
-              "slug": "/educate-after-program",
+              "slug": "/educate/educate-after-program",
               "subCategory": null
           },
           {
               "_id": "6275ed46b0771ba54030ab80",
               "name": "Chương trình đào tạo đặc biệt",
               "isLink": false,
-              "slug": "/educate-special-program",
+              "slug": "/educate/educate-special-program",
               "subCategory": null
           }
       ]
@@ -105,7 +105,7 @@
         {
             "_id": "6275ed46b0771ba5403",
             "name": "Sắp diễn ra",
-            "slug": "/blog/coming",
+            "slug": "#",
             "isLink": false,
             "subCategory": null
         }
@@ -114,7 +114,7 @@
 {
   "_id": "6275ed46b0771ba54030abzz",
   "name": "Liên kết",
-  "slug": "/",
+  "slug": "/link",
   "subCategory": [
       {
           "_id": "6275ed46b0771ba54d",
