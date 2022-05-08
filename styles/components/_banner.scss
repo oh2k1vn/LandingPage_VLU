@@ -4,7 +4,7 @@
   margin: 0 auto;
   font-weight: 700;
   .slick-arrow .slick-next{
-    display: none;
+    display: none !important;
   }
   img {
     object-fit: cover;

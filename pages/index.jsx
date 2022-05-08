@@ -2,6 +2,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import parse from 'html-react-parser';
 import Slider from 'react-slick';
+import { useBlog } from '../states/stores/useBlog';
+import React from 'react';
 
 export default function Home() {
 	const settings = {
@@ -11,6 +13,13 @@ export default function Home() {
 		slidesToShow: 1,
 		slidesToScroll: 1
 	};
+
+	const [states, actions] = useBlog();
+
+	React.useEffect(() => {
+		actions.getBlogs('gioi-thieu', 'vi');
+		console.log(states)
+	} , [])
 
 	return (
 		<>
@@ -23,6 +32,7 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
+			<div>
 			<Slider {...settings}>
 				<div className='banner'>
 					<Image src='/image/banner3.jpg' alt='' layout='fill' />
@@ -39,6 +49,7 @@ export default function Home() {
 					</div>
 				</div>
 			</Slider>
+			</div>
 
 			<main className='home'>
 				<div className='block'>

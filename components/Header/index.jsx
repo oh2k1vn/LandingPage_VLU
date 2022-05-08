@@ -25,7 +25,13 @@ export default function Index() {
 	return (
 		<header>
 			<div className='container header'>
-				<input className='check_hover' type='checkbox' name id='check' hidden />
+				<input
+					className='check_hover'
+					type='checkbox'
+					name=''
+					id='check'
+					hidden
+				/>
 				<label htmlFor='check' className='check_btn'>
 					<BiMenu />
 				</label>

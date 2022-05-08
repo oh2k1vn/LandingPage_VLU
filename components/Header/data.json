@@ -84,7 +84,7 @@
       ]
   },
   {
-    "_id": "6275ed46b0771ba54030abzz",
+    "_id": "6275ed46b076275z",
     "name": "Blog",
     "slug": "/blog",
     "subCategory": [
@@ -131,21 +131,21 @@
           "subCategory": null
       },
       {
-          "_id": "6275ed46b0771ba540312",
+          "_id": "ed46b0771ba540312",
           "name": "Fanpage",
           "isLink": true,
           "slug": "https://www.facebook.com/itvlu",
           "subCategory": null
       },
       {
-        "_id": "6275ed46b0771ba5403123",
+        "_id": "275ed46b0771ba540312",
         "name": "Youtube",
         "isLink": true,
         "slug": "https://www.youtube.com/channel/UCA3rs6ydLPgNghvXXF8In4A",
         "subCategory": null
     },
     {
-      "_id": "6275ed46b0771ba5403123",
+      "_id": "75ed46b0771ba5403123",
       "name": "Online LAB",
       "isLink": true,
       "slug": "https://vlu.is-tech.vn/",
