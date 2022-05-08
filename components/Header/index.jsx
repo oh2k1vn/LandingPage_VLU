@@ -1,8 +1,8 @@
-import { Button, Checkbox, Input, Modal, Row, Text } from '@nextui-org/react';
+import { Button, Checkbox, Modal, Row, Text } from '@nextui-org/react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React from 'react';
-import { BiChevronDown, BiMenu, BiUser, BiX } from 'react-icons/bi';
+import { BiChevronDown, BiMenu, BiX } from 'react-icons/bi';
 import { Images } from '../../constant/Image';
 import Link from '../customs/Link';
 import data from './data';
