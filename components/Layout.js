@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import Header from "./Header";
 // Hieu
 
@@ -8,7 +8,7 @@ export const Layout = ({ children }) => {
     <>
       <Header />
       <main>{children}</main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
