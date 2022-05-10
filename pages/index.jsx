@@ -7,7 +7,7 @@ import React from 'react';
 
 export default function Home() {
 	const settings = {
-		dots: true,	
+		dots: true,
 		infinite: true,
 		speed: 500,
 		slidesToShow: 1,
@@ -18,8 +18,8 @@ export default function Home() {
 
 	React.useEffect(() => {
 		actions.getBlogs('gioi-thieu', 'vi');
-		console.log(states)
-	} , [])
+		console.log(states);
+	}, []);
 
 	return (
 		<>
@@ -32,23 +32,23 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<div>
-			<Slider {...settings}>
-				<div className='banner'>
-					<Image src='/image/banner3.jpg' alt='' layout='fill' />
-					<div className='banner_title'>
-						<h1>{data?.banner?.title}</h1>
-						{data?.banner?.desc && parse(data?.banner?.desc)}
+			<div className='wrap-slider'>
+				<Slider {...settings}>
+					<div className='banner'>
+						<Image src='/image/banner3.jpg' alt='' layout='fill' />
+						<div className='banner_title'>
+							<h1>{data?.banner?.title}</h1>
+							{data?.banner?.desc && parse(data?.banner?.desc)}
+						</div>
 					</div>
-				</div>
-				<div className='banner'>
-					<Image src='/image/banner3.jpg' alt='' layout='fill' />
-					<div className='banner_title'>
-						<h1>{data?.banner?.title}</h1>
-						{data?.banner?.desc && parse(data?.banner?.desc)}
+					<div className='banner'>
+						<Image src='/image/banner3.jpg' alt='' layout='fill' />
+						<div className='banner_title'>
+							<h1>{data?.banner?.title}</h1>
+							{data?.banner?.desc && parse(data?.banner?.desc)}
+						</div>
 					</div>
-				</div>
-			</Slider>
+				</Slider>
 			</div>
 
 			<main className='home'>

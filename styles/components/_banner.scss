@@ -3,8 +3,9 @@
   position: relative;
   margin: 0 auto;
   font-weight: 700;
-  .slick-arrow .slick-next{
-    display: none !important;
+  .wrap-slider{
+    width: 100vw;
+    overflow: hidden;
   }
   img {
     object-fit: cover;

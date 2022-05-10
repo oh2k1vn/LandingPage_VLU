@@ -35,7 +35,7 @@
           {
               "_id": "6275ed46b0771ba54030ab8a",
               "name": "Đào tạo đại học",
-              "slug": "/educate/educate-program",
+              "slug": "/educate/educate-program", 
               "isLink": false,
               "subCategory": null
           },
