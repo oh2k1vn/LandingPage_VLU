@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import axiosClient from './clientAxios.js';
 
 const url = '/category';

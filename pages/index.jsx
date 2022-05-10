@@ -16,9 +16,18 @@ export default function Home() {
 
 	const [states, actions] = useBlog();
 
+	const getBlogs = () => {
+		actions
+			.getBlogs('gioi-thieu', 'vi')
+			.then(res => console.log(res))
+			.catch(err => {
+				// some error handling
+			});
+	};
+
 	React.useEffect(() => {
-		actions.getBlogs('gioi-thieu', 'vi');
-		console.log(states);
+		getBlogs();
+		// eslint-disable-next-line
 	}, []);
 
 	return (
