@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@nextui-org/react": "^1.0.0-beta.6",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.7.0",
     "axios": "^0.27.2",
     "html-react-parser": "^1.4.12",
     "js-cookie": "^3.0.1",
