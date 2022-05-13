@@ -1,7 +1,7 @@
 import React from "react";
 import parse from "html-react-parser";
 import { useRouter } from "next/router";
-import { Avatar, Grid, Typography } from "@mui/material";
+import Author from "../../../components/Author";
 
 export default function BlogDetail() {
   const router = useRouter();
@@ -20,24 +20,7 @@ export default function BlogDetail() {
     <div className="container">
       <div className="blogdetail">
         <div className="blogdetail_content">
-          <Grid
-            container
-            justifyContent="flex-start"
-            alignItems="center"
-            spacing={1}
-          >
-            <Grid item xs={1}>
-              <Avatar
-                alt="Remy Sharp"
-                src="https://www.dungplus.com/wp-content/uploads/2019/12/girl-xinh-1-480x600.jpg"
-              />
-            </Grid>
-            <Grid item xs>
-              <Typography variant="body2" color="text.secondary">
-                Thứ Bảy, ngày 12/03/2022 16:19 PM (GMT+7)
-              </Typography>
-            </Grid>
-          </Grid>
+          <Author getData={getData()} />
 
           <h2>{getData()?.title}</h2>
           <br></br>

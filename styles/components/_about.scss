@@ -1,5 +1,20 @@
 .about {
   padding: 1rem !important;
+  h1 {
+    display: inline-block;
+    margin: 1rem auto;
+    position: relative;
+    padding: 0.5rem 0;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: "";
+      width: 15vw;
+      height: 4px;
+      background-color: tomato;
+    }
+  }
   &_text {
     text-align: center;
     font-weight: 700;
@@ -7,12 +22,11 @@
     &:nth-child(2) {
       text-align: left;
       color: #111;
-      font-size: 2.25rem;
     }
   }
   &_content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     &_item {
       border: 1px solid #ccc;
@@ -20,30 +34,44 @@
       border-radius: 8px;
       box-shadow: 0 3px 3rem rgba(0, 0, 0, 0.08);
       overflow: hidden;
-      img {
-      }
+
       &:hover {
         border: 1px solid tomato;
       }
-      &_caption {
-        padding: 0.4rem 0.5rem;
-        width: max-content !important;
-        border: 1px solid tomato;
-        color: tomato;
-        border-radius: 8px;
+      .about_content_item_body {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem 1rem 1rem;
+        .about_content_item_caption {
+          border: 1px solid tomato;
+          border-radius: 8px;
+          width: max-content;
+          padding: 0.2rem 0.5rem;
+          color: tomato;
+          line-height: 1;
+        }
       }
       button {
         @include button-pc(tomato, #fff, #fff, tomato);
-        width: 40%;
+        width: 30%;
         margin: auto !important;
       }
     }
   }
 }
-@media all and (min-width: 900px) {
+@media all and (max-width: 1024px) {
   .about {
     &_content {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media all and (max-width: 800px) {
+  .about {
+    &_text {
+    }
+    &_content {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }

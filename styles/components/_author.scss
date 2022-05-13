@@ -1,0 +1,22 @@
+.author {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  height: max-content;
+  padding-top: 0.5rem;
+  .author_content {
+    display: flex;
+    flex-direction: column;
+    p {
+      font-weight: 600;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    span {
+      margin: 0;
+    }
+  }
+}
