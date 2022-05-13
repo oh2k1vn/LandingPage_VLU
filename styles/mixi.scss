@@ -1,0 +1,18 @@
+@mixin button_pc($bg, $color, $bg-hover, $color-hover) {
+  border: 1px solid $bg;
+  border-radius: 8px;
+  background-color: $bg;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: $color;
+  font-weight: 700;
+  margin: 1rem auto 0;
+  display: block;
+
+  cursor: pointer;
+  transition: 0.4s ease;
+  &:hover {
+    background-color: $bg-hover;
+    color: $color-hover;
+  }
+}

@@ -1,3 +1,6 @@
+.wrap-slider {
+  overflow: hidden;
+}
 .home {
   .block {
     display: flex;
@@ -26,24 +29,7 @@
       line-height: 2;
     }
     .block_title_btn {
-      border: 1px solid transparent;
-      border-radius: 28px;
-      background-color: #111;
-      width: 195px;
-      height: 54px;
-      color: #fd0002;
-      font-size: 1rem;
-      font-weight: 700;
-      margin: 1rem auto 0;
-      display: block;
-
-      cursor: pointer;
-      transition: 0.4s;
-      &:hover {
-        background-color: #fff;
-        border-color: #111;
-        transform: scale(1.05);
-      }
+      @include button-pc(#111, #fd0002, #fff, #111);
     }
   }
 }

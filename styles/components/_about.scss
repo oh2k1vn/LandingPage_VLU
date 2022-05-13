@@ -1,7 +1,6 @@
 .about {
-  padding: 4rem 1rem 1rem !important;
+  padding: 1rem !important;
   &_text {
-    font-size: 3.5rem;
     text-align: center;
     font-weight: 700;
     margin-bottom: 1.25rem;
@@ -17,55 +16,26 @@
     gap: 1rem;
     &_item {
       border: 1px solid #ccc;
-      padding: 0.5rem;
       transition: all 400ms ease;
-      border-radius: 20px;
+      border-radius: 8px;
       box-shadow: 0 3px 3rem rgba(0, 0, 0, 0.08);
-      &:hover {
-        // border: 1px solid tomato;
-        box-shadow: 0 0 10px tomato;
+      overflow: hidden;
+      img {
       }
-      &_bottom {
-        padding-top: 1.25rem;
-        &-title {
-          color: #333;
-          font-size: 1.5rem;
-          font-weight: 700;
-          line-height: 1.25;
-          margin-bottom: 0.5rem;
-        }
-        &-position {
-          color: #a0a0a0;
-          font-size: 1rem;
-          font-weight: 500;
-          margin-bottom: 0.5rem;
-        }
-        &-caption {
-          position: relative;
-          visibility: visible;
-          overflow: hidden;
-          font-size: 1rem;
-          font-weight: 600;
-          text-overflow: ellipsis;
-
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-        }
+      &:hover {
+        border: 1px solid tomato;
+      }
+      &_caption {
+        padding: 0.4rem 0.5rem;
+        width: max-content !important;
+        border: 1px solid tomato;
+        color: tomato;
+        border-radius: 8px;
       }
       button {
-        background-color: tomato;
-        color: #fff;
-        margin: 1rem auto;
-        font-size: 1.2rem;
-        transition: 0.5s;
-        &:hover {
-          border-radius: 0;
-          background-color: #fff;
-          border-bottom: 2px solid tomato;
-          color: tomato;
-        }
+        @include button-pc(tomato, #fff, #fff, tomato);
+        width: 40%;
+        margin: auto !important;
       }
     }
   }
@@ -74,9 +44,6 @@
   .about {
     &_content {
       grid-template-columns: repeat(3, 1fr);
-      &_item {
-        padding: 1rem;
-      }
     }
   }
 }
