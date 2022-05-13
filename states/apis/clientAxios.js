@@ -1,40 +1,39 @@
-/* eslint-disable no-console */
-import axios from "axios"
-import queryString from "query-string"
-import Cookie from "js-cookie"
+import axios from "axios";
+import queryString from "query-string";
+import Cookie from "js-cookie";
 const axiosClient = axios.create({
   baseURL: "",
   timeout: 20000,
   headers: {
     "content-type": "application/json",
-    "Access-Control-Allow-Origin": "*"
+    "Access-Control-Allow-Origin": "*",
   },
-  paramsSerializer: params => queryString.stringify(params)
-})
+  paramsSerializer: (params) => queryString.stringify(params),
+});
 
 axiosClient.interceptors.request.use(
-  config => {
+  (config) => {
     //Handle token here ...
-    const token = Cookie.get("token")
-    if (token)
-      config.headers.authorization = `Bearer ${token}`
-
-    return config
+    // const token = Cookie.get("token")
+    // if (token)
+    // config.headers.authorization = Bearer ${token}
+    config.headers.language = Cookie.get("language") || "vi";
+    return config;
   },
-  err => {
-    console.error(err)
+  (err) => {
+    console.error(err);
   }
-)
+);
 axiosClient.interceptors.response.use(
-  res => {
-    if (res && res.data) return res.data
-    return res
+  (res) => {
+    if (res && res.data) return res.data;
+    return res;
   },
-  err => {
+  (err) => {
     //Handle err
     // eslint-disable-next-line no-console
-    console.error(err)
+    console.error(err);
   }
-)
+);
 
-export default axiosClient
+export default axiosClient;

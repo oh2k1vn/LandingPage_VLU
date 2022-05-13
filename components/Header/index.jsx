@@ -1,15 +1,18 @@
+import Cookie from "js-cookie";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
-import { BiChevronDown, BiMenu, BiX } from "react-icons/bi";
+import { BiMenu, BiX } from "react-icons/bi";
 import { Images } from "../../constant/Image";
 import Link from "../customs/Link";
 import data from "./data";
 
 export default function Index() {
-  const [visible, setVisible] = React.useState(false);
+  const [language, setLanguage] = React.useState(
+    Cookie.get("language") || "vi"
+  );
+  console.log(language);
   const router = useRouter();
-  const handler = () => setVisible(true);
   const dataDefault = {
     _id: "dataDefault",
     name: "Trang chủ",
@@ -17,8 +20,10 @@ export default function Index() {
     slug: "/",
     subCategory: null,
   };
-  const closeHandler = () => {
-    setVisible(false);
+
+  const handleChangeLanguage = (language) => {
+    setLanguage(language);
+    Cookie.set("language", language);
   };
 
   return (
@@ -89,14 +94,17 @@ export default function Index() {
           })}
         </div>
         <div className="user">
-          <div className="user_icon">
-            <Link to="#" className="user_icon_a">
-              <span>EN</span>
-              <BiChevronDown />
-            </Link>
-            <li className="user_icon_li">
-              <Link to="#">VN</Link>
-            </li>
+          <div
+            className={language === "vi" ? "user_icon active" : "user_icon"}
+            onClick={() => handleChangeLanguage("vi")}
+          >
+            <span>VI</span>
+          </div>
+          <div
+            className={language === "en" ? "user_icon active" : "user_icon"}
+            onClick={() => handleChangeLanguage("en")}
+          >
+            <span>EN</span>
           </div>
         </div>
       </div>

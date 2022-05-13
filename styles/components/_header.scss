@@ -67,9 +67,10 @@ header {
       align-items: center;
       justify-content: center;
       &_icon {
-        margin-right: 2rem;
+        margin-right: 0.4rem;
         position: relative;
         height: 100%;
+        cursor: pointer;
         &_a {
           display: flex;
           align-items: center;
@@ -121,7 +122,9 @@ header {
         }
       }
     }
-
+    .active {
+      color: tomato;
+    }
     .overlay {
       position: fixed;
       top: 0;

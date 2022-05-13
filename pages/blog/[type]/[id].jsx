@@ -3,6 +3,8 @@ import parse from "html-react-parser";
 import { useRouter } from "next/router";
 import Author from "../../../components/Author";
 
+import { getBlogDetailBySlugAsync } from "../../../states/apis/blog.api";
+
 export default function BlogDetail() {
   const router = useRouter();
   const getData = () => {
@@ -16,6 +18,11 @@ export default function BlogDetail() {
     }
   };
 
+  React.useEffect(() => {
+    getBlogDetailBySlugAsync(router.query.id).then((res) => {
+      console.log(res);
+    });
+  }, router.query.id);
   return (
     <div className="container">
       <div className="blogdetail">
