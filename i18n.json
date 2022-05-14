@@ -1,0 +1,8 @@
+{
+	"locales": ["vn", "en"],
+	"defaultLocale": "vn",
+	"keySeparator": ":",
+	"pages": {
+		"*": ["common", "nav", "category", "footer", "blog", "error"]
+	}
+}

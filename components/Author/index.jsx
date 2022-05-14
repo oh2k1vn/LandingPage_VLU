@@ -3,7 +3,6 @@ import React from "react";
 
 export default function Author(props) {
   const { getData } = props;
-  console.log(getData);
   return (
     <div className="author">
       <Avatar
